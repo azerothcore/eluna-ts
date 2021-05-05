@@ -8,6 +8,7 @@
     "src/**/*.d.ts"
   ],
   "scripts": {
+    "version:patch": "npm version patch",
     "lint": "tslint -c tslint.json 'src/**/*.d.ts'",
     "lint:fix": "tslint --fix -c tslint.json 'src/**/*.d.ts'"
   },
