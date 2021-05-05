@@ -1,6 +1,6 @@
 {
   "name": "@azerothcore/eluna-ts-definitions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript definitions for the Eluna-TS system",
   "main": "src/index.d.ts",
   "types": "src/index.d.ts",
