@@ -24,9 +24,10 @@ jobs:
     - run: npm install
     - run: npm lint
   deploy:
-    - needs: checks
+      needs: checks
     - name: Publish package
-    - run: npm install
-    - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: |
+      npm install
+      npm publish
