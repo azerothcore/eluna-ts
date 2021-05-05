@@ -24,7 +24,10 @@ jobs:
     - run: npm install
     - run: npm lint
   deploy:
-      needs: checks
+    needs: checks
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v2
     - name: Publish package
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
