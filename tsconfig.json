@@ -13,7 +13,7 @@
         ],
         "typeRoots": [
             "./node_modules/@types",
-            "./src/declarations"
+            "./src"
         ]
     },
     "include": [
