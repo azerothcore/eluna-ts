@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  test-n-deploy:
-    name: Test and Deploy
+  checks:
+    name: Checks
     runs-on: ubuntu-latest
 
     strategy:
@@ -23,7 +23,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm lint
-    - name: Publish
+  deploy:
+    - needs: checks
+    - name: Publish package
+    - run: npm install
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
