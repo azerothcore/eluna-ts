@@ -30,8 +30,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm install
-    - name: Update version in package.json
-      uses: maks-stupak/gh-action-bump-version@v7.1.5
+    #- name: Update version in package.json
+    #  uses: maks-stupak/gh-action-bump-version@v7.1.5
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:
