@@ -21,8 +21,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run lint
+    - run: |
+      cd packages/eluna-ts-definitions
+      npm install
+      npm run lint
   deploy:
     needs: checks
     runs-on: ubuntu-latest
@@ -34,9 +36,11 @@ jobs:
       uses:  'phips28/gh-action-bump-version@master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PACKAGEJSON_DIR: packages/eluna-ts-definitions
       with:
         tag-prefix:  ''
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
+        package: packages/eluna-ts-definitions/package.json

@@ -1,0 +1,46 @@
+name: Eluna TS Lib
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  checks:
+    name: Checks
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 15.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: |
+      cd packages/eluna-ts-lib
+      npm install
+      npm run lint
+  deploy:
+    needs: checks
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm install
+    - name: Update version in package.json
+      uses:  'phips28/gh-action-bump-version@master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PACKAGEJSON_DIR: packages/eluna-ts-lib
+      with:
+        tag-prefix:  ''
+    - name: Publish package
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+        package: packages/eluna-ts-lib/package.json
