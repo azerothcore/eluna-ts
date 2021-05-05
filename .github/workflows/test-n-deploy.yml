@@ -7,8 +7,8 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
+  test-n-deploy:
+    name: Test and Deploy
     runs-on: ubuntu-latest
 
     strategy:
