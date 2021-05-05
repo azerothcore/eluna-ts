@@ -1,4 +1,5 @@
-import "./declarations/WorldObjectMethods";
+import "./WorldObjectMethods";
 
-import "./declarations/PlayerHooks.d.ts";
-import "./declarations/PlayerMethods.d.ts";
+import "./PlayerEvents";
+import "./PlayerHooks";
+import "./PlayerMethods";

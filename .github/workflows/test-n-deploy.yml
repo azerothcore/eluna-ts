@@ -33,6 +33,6 @@ jobs:
     - name: Update version in package.json
       uses: maks-stupak/gh-action-bump-version@v7.1.5
     - name: Publish package
-      env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: npm publish --access=public
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
