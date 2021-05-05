@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "esnext",
+        "lib": [
+            "esnext"
+        ],
+        "moduleResolution": "node",
+        "types": [
+            "lua-types/5.2",
+            "@azerothcore/eluna-ts-definitions"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules/@azerothcore/eluna-ts-definitions"
+        ],
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
