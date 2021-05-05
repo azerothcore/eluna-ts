@@ -30,8 +30,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: npm install
-    #- name: Update version in package.json
-    #  uses: maks-stupak/gh-action-bump-version@v7.1.5
+    - name: Update version in package.json
+      uses:  'phips28/gh-action-bump-version@master'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag-prefix:  ''
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:
