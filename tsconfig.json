@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "target": "es5",
+        "moduleResolution": "node",
+        "strict": true,
+        "rootDir": "src",
+        "types": [
+            "lua-types/5.2"
+        ],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./src/declarations"
+        ]
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
