@@ -29,9 +29,10 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v2
+    - run: npm install
+    - name: Update version in package.json
+      uses: maks-stupak/gh-action-bump-version@v7.1.5
     - name: Publish package
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: |
-        npm install
-        npm publish --access=public
+      run: npm publish --access=public
