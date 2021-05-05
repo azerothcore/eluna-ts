@@ -22,9 +22,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-      cd packages/eluna-ts-definitions
-      npm install
-      npm run lint
+        cd packages/eluna-ts-definitions
+        npm install
+        npm run lint
   deploy:
     needs: checks
     runs-on: ubuntu-latest
