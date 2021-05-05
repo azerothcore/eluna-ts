@@ -38,7 +38,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PACKAGEJSON_DIR: packages/eluna-ts-lib
       with:
-        tag-prefix:  ''
+        tag-prefix:  'lib-'
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:
