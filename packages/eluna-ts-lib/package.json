@@ -1,6 +1,6 @@
 {
   "name": "@azerothcore/eluna-ts-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript libraries for the Eluna-TS system",
   "main": "src/index.ts",
   "scripts": {
