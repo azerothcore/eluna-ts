@@ -3,8 +3,12 @@ name: Eluna TS Lib
 on:
   push:
     branches: [ master ]
+    paths:
+      - packages/eluna-ts-lib/**
   pull_request:
     branches: [ master ]
+    paths:
+      - packages/eluna-ts-lib/**
 
 jobs:
   checks:

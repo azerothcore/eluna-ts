@@ -3,8 +3,12 @@ name: Eluna TS Definitions
 on:
   push:
     branches: [ master ]
+    paths:
+      - packages/eluna-ts-definitions/**
   pull_request:
     branches: [ master ]
+    paths:
+      - packages/eluna-ts-definitions/**
 
 jobs:
   checks:
