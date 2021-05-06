@@ -17,3 +17,19 @@ export function RegisterPlayerOnLogout(listener: OnLogin) {
     },
   );
 }
+
+export function RegisterPlayerOnChat(listener: OnChat) {
+  RegisterPlayerEvent(
+    PlayerEvents.PLAYER_EVENT_ON_CHAT,
+    /** @noSelf **/
+    function (
+      event: number,
+      player: Player,
+      msg: string,
+      type: number,
+      lang: number,
+    ) {
+      return listener(event, player, msg, type, lang);
+    },
+  );
+}

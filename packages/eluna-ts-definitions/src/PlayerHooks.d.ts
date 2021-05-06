@@ -8,9 +8,18 @@ declare type OnLogout = (
   player: Player,
 ) => void;
 
+declare type OnChat = (
+  event: PlayerEvents.PLAYER_EVENT_ON_LOGOUT,
+  player: Player,
+  msg: string,
+  type: number,
+  lang: number,
+) => void;
+
 declare interface PlayerHooks {
   OnLogin?: OnLogin;
   OnLogout?: OnLogout;
+  OnChat?: OnChat;
 }
 
 /**

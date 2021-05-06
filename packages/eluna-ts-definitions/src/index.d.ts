@@ -1,3 +1,4 @@
+import "./MapMethods";
 import "./WorldObjectMethods";
 
 import "./PlayerEvents";
