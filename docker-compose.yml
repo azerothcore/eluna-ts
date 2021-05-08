@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  eluna-ts-build:
+    image: acore/eluna-ts:${DOCKER_IMAGE_TAG:-master}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run build
+    environment:
+      - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE}
+    volumes:
+      - ${ELUNATS_LUA_ROOT_DIR:-'./dist'}:/opt/application/dist
+      - ./src:/opt/application/src
+
+  eluna-ts-dev:
+    image: acore/eluna-ts:${DOCKER_IMAGE_TAG:-master}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run dev
+    environment:
+      - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE}
+    volumes:
+      - ${ELUNATS_LUA_ROOT_DIR:-'./dist'}:/opt/application/dist
+      - ./src:/opt/application/src
