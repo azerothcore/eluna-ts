@@ -10,8 +10,8 @@ services:
     environment:
       - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE:-eluna-ts.lua}
     volumes:
-      - ${ELUNATS_LUA_ROOT_DIR:-./dist}:/opt/application/dist
-      - ./src:/opt/application/src
+      - ${ELUNATS_LUA_ROOT_DIR:-./dist}:/eluna-ts/dist
+      - ./src:/eluna-ts/src
 
   eluna-ts-dev:
     image: acore/eluna-ts:${DOCKER_IMAGE_TAG:-master}
@@ -22,5 +22,5 @@ services:
     environment:
       - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE:-eluna-ts.lua}
     volumes:
-      - ${ELUNATS_LUA_ROOT_DIR:-./dist}:/opt/application/dist
-      - ./src:/opt/application/src
+      - ${ELUNATS_LUA_ROOT_DIR:-./dist}:/eluna-ts/dist
+      - ./src:/eluna-ts/src
