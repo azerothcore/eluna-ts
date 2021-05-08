@@ -20,6 +20,14 @@ jobs:
         node-version: [12.x, 14.x, 15.x]
 
     steps:
+    - name: Wait for build to succeed
+      uses: fountainhead/action-wait-for-check@v1.0.0
+      id: wait-for-build
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        checkName: Eluna TS Definitions
+        ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
