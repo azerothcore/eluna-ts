@@ -8,11 +8,12 @@
     "moduleResolution": "node",
     "types": [
       "lua-types/5.2",
-      "@azerothcore/eluna-ts-definitions"
+      "@azerothcore/eluna-ts-definitions",
+      "@azerothcore/eluna-ts-lib"
     ],
     "typeRoots": [
       "./node_modules/@types",
-      "./node_modules/@azerothcore/eluna-ts-definitions"
+      "./node_modules/@azerothcore"
     ],
     "rootDir": "src"
   },

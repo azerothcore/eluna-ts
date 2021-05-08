@@ -2,6 +2,7 @@
     "compilerOptions": {
         "strict": true,
         "target": "esnext",
+        "declaration": true,
         "lib": [
             "esnext"
         ],
