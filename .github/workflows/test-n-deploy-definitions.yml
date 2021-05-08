@@ -74,6 +74,7 @@ jobs:
     - run: |
         cd deps/eluna-ts-definitions
         npm install
+        git pull
     - name: Update version in package.json
       uses:  'phips28/gh-action-bump-version@master'
       env:
