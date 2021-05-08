@@ -8,9 +8,9 @@ services:
       dockerfile: Dockerfile
     command: npm run build
     environment:
-      - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE}
+      - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE:-eluna-ts.lua}
     volumes:
-      - ${ELUNATS_LUA_ROOT_DIR:-'./dist'}:/opt/application/dist
+      - ${ELUNATS_LUA_ROOT_DIR:-./dist}:/opt/application/dist
       - ./src:/opt/application/src
 
   eluna-ts-dev:
@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile
     command: npm run dev
     environment:
-      - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE}
+      - ELUNATS_BUILD_FILE=${ELUNATS_BUILD_FILE:-eluna-ts.lua}
     volumes:
-      - ${ELUNATS_LUA_ROOT_DIR:-'./dist'}:/opt/application/dist
+      - ${ELUNATS_LUA_ROOT_DIR:-./dist}:/opt/application/dist
       - ./src:/opt/application/src
