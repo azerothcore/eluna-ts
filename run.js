@@ -10,7 +10,7 @@ const program = (new command.Command()).name("node run");
 
 program.command("build").option("-w,--watch", "Run the build process in watch mode", false)
     .action(({ watch }) => {
-        const luaBundle = path.join(ELUNATS_LUA_ROOT_DIR, ELUNATS_BUILD_FILE);
+        const luaBundle = path.resolve(ELUNATS_LUA_ROOT_DIR, ELUNATS_BUILD_FILE);
         execSync(`npx tstl ${watch ? '--watch' : ''} --luaBundle ${luaBundle}`, {
             cwd: process.cwd(),
             stdio: "inherit",
@@ -19,7 +19,8 @@ program.command("build").option("-w,--watch", "Run the build process in watch mo
     })
 
 program.command("build:lib").action(() => {
-    const luaBundle = path.join(ELUNATS_LUA_ROOT_DIR, "@azerothcore/eluna-ts-lib.lua");
+    let luaBundle = path.resolve(ELUNATS_LUA_ROOT_DIR, "@azerothcore/eluna-ts-lib.lua");
+
     execSync(`npx tstl -p ./deps/eluna-ts-lib/tsconfig.json --luaBundle ${luaBundle}`, {
         cwd: process.cwd(),
         stdio: "inherit",
