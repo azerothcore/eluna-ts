@@ -4,11 +4,11 @@ on:
   push:
     branches: [ master ]
     paths:
-      - packages/eluna-ts-definitions/**
+      - deps/eluna-ts-definitions/**
   pull_request:
     branches: [ master ]
     paths:
-      - packages/eluna-ts-definitions/**
+      - deps/eluna-ts-definitions/**
 
 jobs:
   checks:
@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-        cd packages/eluna-ts-definitions
+        cd deps/eluna-ts-definitions
         npm install
         npm run lint
   deploy:
@@ -40,11 +40,11 @@ jobs:
       uses:  'phips28/gh-action-bump-version@master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PACKAGEJSON_DIR: packages/eluna-ts-definitions
+        PACKAGEJSON_DIR: deps/eluna-ts-definitions
       with:
         tag-prefix:  'definitions-'
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
-        package: packages/eluna-ts-definitions/package.json
+        package: deps/eluna-ts-definitions/package.json

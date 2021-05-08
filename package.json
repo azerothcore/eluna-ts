@@ -1,0 +1,35 @@
+{
+  "name": "@azerothcore/eluna-ts",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "description": "Typescript transpiler for Eluna",
+  "scripts": {
+    "build": "node run build",
+    "build:lib": "node run build:lib",
+    "dev": "node run build --watch"
+  },
+  "workspaces": [
+    "deps/eluna-ts-definitions",
+    "deps/eluna-ts-lib"
+  ],
+  "main": "src/index.ts",
+  "author": "AzerothCore",
+  "contributors": [
+    "Yehonal"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@azerothcore/eluna-ts-definitions": "./deps/eluna-ts-definitions"
+  },
+  "dependencies": {
+    "@azerothcore/eluna-ts-lib": "./deps/eluna-ts-lib",
+    "commander": "^7.2.0",
+    "dotenv": "^9.0.0",
+    "lua-types": "^2.10.1",
+    "typescript": "^4.2.4",
+    "typescript-to-lua": "^0.39.3"
+  }
+}

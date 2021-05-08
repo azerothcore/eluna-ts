@@ -1,0 +1,32 @@
+{
+  "name": "@azerothcore/eluna-ts-lib",
+  "version": "1.0.1",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
+  },
+  "description": "Typescript libraries for the Eluna-TS system",
+  "main": "src/index.ts",
+  "scripts": {
+    "version:patch": "npm version patch",
+    "lint": "tslint -c tslint.json 'src/**/*.d.ts'",
+    "lint:fix": "tslint --fix -c tslint.json 'src/**/*.d.ts'",
+    "build": "tstl",
+    "dev": "tstl --watch"
+  },
+  "author": "AzerothCore",
+  "contributors": [
+    "Yehonal"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "tslint": "^6.1.3"
+  },
+  "dependencies": {
+    "@azerothcore/eluna-ts-definitions": "^1.0.2",
+    "lua-types": "^2.10.1",
+    "typescript-to-lua": "^0.39.3",
+    "typescript": "^4.2.4"
+  }
+}

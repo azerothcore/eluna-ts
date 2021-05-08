@@ -4,11 +4,11 @@ on:
   push:
     branches: [ master ]
     paths:
-      - packages/eluna-ts-lib/**
+      - deps/eluna-ts-lib/**
   pull_request:
     branches: [ master ]
     paths:
-      - packages/eluna-ts-lib/**
+      - deps/eluna-ts-lib/**
 
 jobs:
   checks:
@@ -26,25 +26,28 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-        cd packages/eluna-ts-lib
+        cd deps/eluna-ts-lib
         npm install
         npm run lint
+        npm run build
   deploy:
     needs: checks
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
     - uses: actions/checkout@v2
-    - run: npm install
+    - run: |
+        npm install
+        npm run build
     - name: Update version in package.json
       uses:  'phips28/gh-action-bump-version@master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PACKAGEJSON_DIR: packages/eluna-ts-lib
+        PACKAGEJSON_DIR: deps/eluna-ts-lib
       with:
         tag-prefix:  'lib-'
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
-        package: packages/eluna-ts-lib/package.json
+        package: deps/eluna-ts-lib/package.json

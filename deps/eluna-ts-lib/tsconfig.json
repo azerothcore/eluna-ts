@@ -8,14 +8,22 @@
         "moduleResolution": "node",
         "types": [
             "lua-types/5.2",
-            "@azerothcore/eluna-ts-definitions"
+            "../eluna-ts-definitions"
         ],
         "typeRoots": [
             "./node_modules/@types",
-            "./node_modules/@azerothcore/eluna-ts-definitions"
+            "../eluna-ts-definitions"
         ],
+        "rootDir": "src"
     },
     "include": [
         "src/**/*.ts"
-    ]
+    ],
+    "tstl": {
+        "luaTarget": "5.2",
+        "noHeader": true,
+        "luaLibImport": "always",
+        "luaBundle": "./dist/@azerothcore/eluna-ts-lib.lua",
+        "luaBundleEntry": "./src/index.ts"
+    }
 }

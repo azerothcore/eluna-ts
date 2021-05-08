@@ -1,0 +1,7 @@
+node_modules
+/var/*
+/src/*
+!/src/.gitkeep
+/dist/*
+!/dist/@azerothcore
+.env
