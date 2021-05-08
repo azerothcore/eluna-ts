@@ -71,7 +71,9 @@ jobs:
       with:
         node-version: 14.x
 
-    - run: npm install
+    - run: |
+        cd deps/eluna-ts-definitions
+        npm install
     - name: Update version in package.json
       uses:  'phips28/gh-action-bump-version@master'
       env:

@@ -73,6 +73,7 @@ jobs:
         node-version: 14.x
 
     - run: |
+        cd deps/eluna-ts-lib
         npm install
         npm run build
         git pull
