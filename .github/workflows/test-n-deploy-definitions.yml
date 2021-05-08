@@ -1,6 +1,7 @@
 name: Eluna TS Definitions
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
     paths:
