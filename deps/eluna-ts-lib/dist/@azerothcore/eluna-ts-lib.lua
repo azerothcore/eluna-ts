@@ -1832,29 +1832,13 @@ function __TS__TypeOf(value)
 end
 
 end,
-["PlayerHooks"] = function() require("lualib_bundle");
+["HookHelpers"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterPlayerOnLogin(self, listener)
+function ____exports.RegisterHook(self, event, listener)
     RegisterPlayerEvent(
-        3,
-        function(event, player)
-            return listener(nil, event, player)
-        end
-    )
-end
-function ____exports.RegisterPlayerOnLogout(self, listener)
-    RegisterPlayerEvent(
-        4,
-        function(event, player)
-            return listener(nil, event, player)
-        end
-    )
-end
-function ____exports.RegisterPlayerOnChat(self, listener)
-    RegisterPlayerEvent(
-        18,
-        function(event, player, msg, ____type, lang)
-            return listener(nil, event, player, msg, ____type, lang)
+        event,
+        function(...)
+            return listener(nil, ...)
         end
     )
 end
@@ -1863,7 +1847,7 @@ end,
 ["index"] = function() require("lualib_bundle");
 local ____exports = {}
 do
-    local ____export = require("PlayerHooks")
+    local ____export = require("HookHelpers")
     for ____exportKey, ____exportValue in pairs(____export) do
         if ____exportKey ~= "default" then
             ____exports[____exportKey] = ____exportValue
