@@ -1,6 +1,6 @@
 {
   "name": "@azerothcore/eluna-ts-lib",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
