@@ -212,16 +212,16 @@ declare type player_event_on_chat = (
   event: PlayerEvents.PLAYER_EVENT_ON_CHAT,
   pPlayer: Player,
   msg: string,
-  type: number,
-  lang: number,
+  type: ChatMsg,
+  lang: Language,
 ) => boolean | string;
 
 declare type player_event_on_group_chat = (
   event: PlayerEvents.PLAYER_EVENT_ON_GROUP_CHAT,
   pPlayer: Player,
   msg: string,
-  type: number,
-  lang: number,
+  type: ChatMsg,
+  lang: Language,
   pGroup: Group,
 ) => boolean | string;
 
@@ -229,8 +229,8 @@ declare type player_event_on_guild_chat = (
   event: PlayerEvents.PLAYER_EVENT_ON_GUILD_CHAT,
   pPlayer: Player,
   msg: string,
-  type: number,
-  lang: number,
+  type: ChatMsg,
+  lang: Language,
   pGuild: Guild,
 ) => boolean | string;
 
@@ -238,8 +238,8 @@ declare type player_event_on_channel_chat = (
   event: PlayerEvents.PLAYER_EVENT_ON_CHANNEL_CHAT,
   player: Player,
   msg: string,
-  type: number,
-  lang: number,
+  type: ChatMsg,
+  lang: Language,
   channel: number,
 ) => boolean | string;
 
@@ -247,7 +247,7 @@ declare type player_event_on_whisper = (
   event: PlayerEvents.PLAYER_EVENT_ON_WHISPER,
   pPlayer: Player,
   msg: string,
-  type: number,
-  lang: number,
+  type: ChatMsg,
+  lang: Language,
   pReceiver: Player,
 ) => boolean | string;

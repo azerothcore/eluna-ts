@@ -1,7 +1,9 @@
 node_modules
 /var/*
-/src/*
-!/src/.gitkeep
+/modules/*
+!/modules/eluna-ts-mod-skeleton
 /dist/*
 !/dist/@azerothcore
 .env
+/docs/*
+!/docs/.gitkeep

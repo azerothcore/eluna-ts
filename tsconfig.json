@@ -15,15 +15,26 @@
       "./node_modules/@types",
       "./node_modules/@azerothcore"
     ],
-    "rootDir": "src"
+    "rootDir": "modules"
   },
   "include": [
-    "src/**/*.ts"
+    "modules/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./deps/eluna-ts-definitions"
+    },
+    {
+      "path": "./deps/eluna-ts-lib/tsconfig.ref.json"
+    }
   ],
   "tstl": {
     "luaTarget": "5.2",
     "noHeader": true,
     "luaLibImport": "none",
-    "luaBundleEntry": "./src/index.ts"
+    "luaBundleEntry": "./modules/index.ts"
   }
 }

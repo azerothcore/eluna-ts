@@ -1,10 +1,6 @@
-/**
- * @noSelf
- */
 export function RegisterServerOnPacketSendAny(
   /** opcode */
   entry: number,
-  /** @noSelf **/
   hook: server_event_on_packet_send_any,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -21,13 +17,9 @@ export function RegisterServerOnPacketSendAny(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPacketOnPacketSendOne(
   /** opcode */
   entry: number,
-  /** @noSelf **/
   hook: packet_event_on_packet_send_one,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -45,13 +37,9 @@ export function RegisterPacketOnPacketSendOne(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterServerOnPacketReceiveAny(
   /** opcode */
   entry: number,
-  /** @noSelf **/
   hook: server_event_on_packet_receive_any,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -68,13 +56,9 @@ export function RegisterServerOnPacketReceiveAny(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPacketOnPacketReceiveOne(
   /** opcode */
   entry: number,
-  /** @noSelf **/
   hook: packet_event_on_packet_receive_one,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

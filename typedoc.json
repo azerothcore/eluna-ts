@@ -1,0 +1,7 @@
+{
+  "excludeExternals": true,
+  "entryPoints": [
+    "./deps"
+  ],
+  "out": "docs/typedoc"
+}

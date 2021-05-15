@@ -1,9 +1,5 @@
-/**
- * @noSelf
- */
 export function RegisterCreatureOnDummyEffect(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_dummy_effect,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -22,12 +18,8 @@ export function RegisterCreatureOnDummyEffect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOnQuestAccept(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_quest_accept,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -45,12 +37,8 @@ export function RegisterCreatureOnQuestAccept(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOnQuestReward(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_quest_reward,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -69,12 +57,8 @@ export function RegisterCreatureOnQuestReward(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureGetDialogStatus(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_dialog_status,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -91,12 +75,8 @@ export function RegisterCreatureGetDialogStatus(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOnAddToWorld(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_add,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -110,12 +90,8 @@ export function RegisterCreatureOnAddToWorld(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOnRemoveFromWorld(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_remove,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -129,12 +105,8 @@ export function RegisterCreatureOnRemoveFromWorld(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOnSummoned(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_summoned,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -151,12 +123,8 @@ export function RegisterCreatureOnSummoned(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureUpdateAI(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_aiupdate,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -173,12 +141,8 @@ export function RegisterCreatureUpdateAI(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureEnterCombat(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_enter_combat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -195,12 +159,8 @@ export function RegisterCreatureEnterCombat(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureDamageTaken(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_damage_taken,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -218,12 +178,8 @@ export function RegisterCreatureDamageTaken(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureJustDied(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_died,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -240,12 +196,8 @@ export function RegisterCreatureJustDied(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureKilledUnit(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_target_died,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -262,12 +214,8 @@ export function RegisterCreatureKilledUnit(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureJustSummoned(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_just_summoned_creature,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -284,12 +232,8 @@ export function RegisterCreatureJustSummoned(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureSummonedCreatureDespawn(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_summoned_creature_despawn,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -306,12 +250,8 @@ export function RegisterCreatureSummonedCreatureDespawn(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureMovementInform(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_reach_wp,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -329,12 +269,8 @@ export function RegisterCreatureMovementInform(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureAttackStart(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_pre_combat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -351,12 +287,8 @@ export function RegisterCreatureAttackStart(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureEnterEvadeMode(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_leave_combat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -370,12 +302,8 @@ export function RegisterCreatureEnterEvadeMode(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureJustRespawned(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_spawn,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -389,12 +317,8 @@ export function RegisterCreatureJustRespawned(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureJustReachedHome(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_reach_home,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -408,12 +332,8 @@ export function RegisterCreatureJustReachedHome(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureReceiveEmote(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_receive_emote,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -431,12 +351,8 @@ export function RegisterCreatureReceiveEmote(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureCorpseRemoved(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_corpse_removed,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -453,12 +369,8 @@ export function RegisterCreatureCorpseRemoved(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureMoveInLineOfSight(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_move_in_los,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -475,12 +387,8 @@ export function RegisterCreatureMoveInLineOfSight(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureSpellHit(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_hit_by_spell,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -498,12 +406,8 @@ export function RegisterCreatureSpellHit(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureSpellHitTarget(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_spell_hit_target,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -521,12 +425,8 @@ export function RegisterCreatureSpellHitTarget(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureSummonedCreatureDies(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_summoned_creature_died,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -544,12 +444,8 @@ export function RegisterCreatureSummonedCreatureDies(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOwnerAttackedBy(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_owner_attacked_at,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -566,12 +462,8 @@ export function RegisterCreatureOwnerAttackedBy(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureOwnerAttacked(
   entry: number,
-  /** @noSelf **/
   hook: creature_event_on_owner_attacked,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

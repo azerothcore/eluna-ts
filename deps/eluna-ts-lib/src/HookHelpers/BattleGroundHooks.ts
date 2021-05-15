@@ -1,8 +1,4 @@
-/**
- * @noSelf
- */
 export function RegisterBattleGroundOnBGStart(
-  /** @noSelf **/
   hook: bg_event_on_start,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -19,11 +15,7 @@ export function RegisterBattleGroundOnBGStart(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterBattleGroundOnBGCreate(
-  /** @noSelf **/
   hook: bg_event_on_create,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -40,11 +32,7 @@ export function RegisterBattleGroundOnBGCreate(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterBattleGroundOnBGDestroy(
-  /** @noSelf **/
   hook: bg_event_on_pre_destroy,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

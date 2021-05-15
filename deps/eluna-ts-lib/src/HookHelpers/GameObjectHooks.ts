@@ -1,9 +1,5 @@
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnDummyEffect(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_dummy_effect,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -22,12 +18,8 @@ export function RegisterGameObjectOnDummyEffect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectUpdateAI(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_aiupdate,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -44,12 +36,8 @@ export function RegisterGameObjectUpdateAI(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnQuestAccept(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_quest_accept,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -67,12 +55,8 @@ export function RegisterGameObjectOnQuestAccept(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnQuestReward(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_quest_reward,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -91,12 +75,8 @@ export function RegisterGameObjectOnQuestReward(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectGetDialogStatus(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_dialog_status,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -113,12 +93,8 @@ export function RegisterGameObjectGetDialogStatus(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnDestroyed(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_destroyed,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -135,12 +111,8 @@ export function RegisterGameObjectOnDestroyed(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnDamaged(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_damaged,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -157,12 +129,8 @@ export function RegisterGameObjectOnDamaged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnLootStateChanged(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_loot_state_change,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -179,12 +147,8 @@ export function RegisterGameObjectOnLootStateChanged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnGameObjectStateChanged(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_go_state_changed,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -201,12 +165,8 @@ export function RegisterGameObjectOnGameObjectStateChanged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnSpawn(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_spawn,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -222,12 +182,8 @@ export function RegisterGameObjectOnSpawn(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnAddToWorld(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_add,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -243,12 +199,8 @@ export function RegisterGameObjectOnAddToWorld(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnRemoveFromWorld(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_remove,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -264,12 +216,8 @@ export function RegisterGameObjectOnRemoveFromWorld(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectOnGameObjectUse(
   entry: number,
-  /** @noSelf **/
   hook: gameobject_event_on_use,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

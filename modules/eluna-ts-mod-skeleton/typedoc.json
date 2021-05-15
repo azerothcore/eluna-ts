@@ -1,0 +1,7 @@
+{
+  "excludeExternals": true,
+  "entryPoints": [
+    "./src"
+  ],
+  "out": "docs"
+}

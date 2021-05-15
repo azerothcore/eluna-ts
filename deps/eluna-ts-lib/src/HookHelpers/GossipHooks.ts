@@ -1,9 +1,5 @@
-/**
- * @noSelf
- */
 export function RegisterPlayerGossipOnGossipHello(
   menuId: number,
-  /** @noSelf **/
   hook: gossip_event_on_hello,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -20,12 +16,8 @@ export function RegisterPlayerGossipOnGossipHello(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerGossipOnGossipSelect(
   menuId: number,
-  /** @noSelf **/
   hook: gossip_event_on_select,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -45,12 +37,8 @@ export function RegisterPlayerGossipOnGossipSelect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterGameObjectGossipOnGossipHello(
   entry: number,
-  /** @noSelf **/
   hook: gossip_event_on_hello,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -67,12 +55,8 @@ export function RegisterGameObjectGossipOnGossipHello(
   );
 }
 
-/**
-   * @noSelf
-   */
 export function RegisterGameObjectGossipOnGossipSelect(
   entry: number,
-  /** @noSelf **/
   hook: gossip_event_on_select,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -92,12 +76,8 @@ export function RegisterGameObjectGossipOnGossipSelect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureGossipOnGossipHello(
   entry: number,
-  /** @noSelf **/
   hook: gossip_event_on_hello,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -114,12 +94,8 @@ export function RegisterCreatureGossipOnGossipHello(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterCreatureGossipOnGossipSelect(
   entry: number,
-  /** @noSelf **/
   hook: gossip_event_on_select,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -139,12 +115,8 @@ export function RegisterCreatureGossipOnGossipSelect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterItemGossipOnGossipHello(
   entry: number,
-  /** @noSelf **/
   hook: gossip_event_on_hello,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -161,12 +133,8 @@ export function RegisterItemGossipOnGossipHello(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterItemGossipOnGossipSelect(
   entry: number,
-  /** @noSelf **/
   hook: gossip_event_on_select,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

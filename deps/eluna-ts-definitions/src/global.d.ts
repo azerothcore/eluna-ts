@@ -489,6 +489,15 @@ declare const enum TempSummonType {
   TEMPSUMMON_TIMED_OOC_OR_CORPSE_DESPAWN = 9, // despawns after a specified time (OOC) OR when the creature dies
   TEMPSUMMON_TIMED_OOC_OR_DEAD_DESPAWN = 10, // despawns after a specified time (OOC) OR when the creature disappears
 }
+
+/**
+The persistent effect of a Spell that remains on a Unit after the Spell has been cast.
+
+As an example, if you cast a damage-over-time spell on a target, an Aura is put on the target that deals damage continuously.
+
+Auras on your player are displayed in-game as a series of icons to the left of the mini-map.
+
+ */
 declare class Aura {
   /**
      * Returns the ID of the [Spell] that caused this [Aura] to be applied.
@@ -558,6 +567,10 @@ declare class Aura {
   SetStackAmount(amount: number): void;
 }
 
+/**
+Contains the state of a battleground, e.g. Warsong Gulch, Arathi Basin, etc.
+
+ */
 declare class BattleGround {
   /**
      * Returns the amount of alive players in the [BattleGround] by the team ID.
@@ -650,7 +663,10 @@ declare class BattleGround {
   GetWinner(): Team;
 }
 
-declare class Corpse {
+/**
+The remains of a Player that has died.
+ */
+declare class Corpse extends WorldObject {
   /**
      * Returns the time when the [Player] became a ghost and spawned this [Corpse].
      */
@@ -684,7 +700,10 @@ declare class Corpse {
   SaveToDB(): void;
 }
 
-declare class Creature {
+/**
+Non-Player controlled Units (i.e. NPCs).
+ */
+declare class Creature extends Unit {
   /**
      * Adds a loot mode to the [Creature]
      */
@@ -817,7 +836,7 @@ declare class Creature {
 
   /**
      * Returns the [Creature]'s creature family ID (enumerated in CreatureFamily.dbc).
-     * <pre>
+     * ```typescript
      * enum CreatureFamily
      * {
      *     CREATURE_FAMILY_NONE                = 0,    // TrinityCore only
@@ -864,7 +883,7 @@ declare class Creature {
      *     CREATURE_FAMILY_CORE_HOUND          = 45,
      *     CREATURE_FAMILY_SPIRIT_BEAST        = 46
      * };
-     * </pre>
+     * ```
      */
   GetCreatureFamily(): CreatureFamily;
 
@@ -1196,6 +1215,11 @@ declare class Creature {
   UpdateEntry(entry: number, dataGUIDLow?: number): void;
 }
 
+/**
+The result of a database query.
+
+E.g. the return value of Global:WorldDBQuery.
+ */
 declare class ElunaQuery {
   /**
      * Returns the data in the specified column of the current row, casted to a boolean.
@@ -1291,7 +1315,7 @@ declare class ElunaQuery {
   NextRow(): boolean;
 }
 
-declare class GameObject {
+declare class GameObject extends WorldObject {
   /**
      * Despawns a [GameObject]
      * The gameobject may be automatically respawned by the core
@@ -1311,14 +1335,14 @@ declare class GameObject {
   /**
      * Returns the state of a [GameObject]
      * Below are client side [GOState]s off of 3.3.5a
-     * <pre>
+     * ```typescript
      * enum GOState
      * {
      *     GO_STATE_ACTIVE             = 0,                        // show in world as used and not reset (closed door open)
      *     GO_STATE_READY              = 1,                        // show in world as ready (closed door close)
      *     GO_STATE_ACTIVE_ALTERNATIVE = 2                         // show in world as used in alt way and not reset (closed door open by cannon fire)
      * };
-     * </pre>
+     * ```
      */
   GetGoState(): GOState;
 
@@ -1337,7 +1361,7 @@ declare class GameObject {
   /**
      * Returns the [LootState] of a [GameObject]
      * Below are [LootState]s off of 3.3.5a
-     * <pre>
+     * ```typescript
      * enum LootState
      * {
      *     GO_NOT_READY = 0,
@@ -1345,7 +1369,7 @@ declare class GameObject {
      *     GO_ACTIVATED,
      *     GO_JUST_DEACTIVATED
      * };
-     * </pre>
+     * ```
      */
   GetLootState(): LootState;
 
@@ -1387,21 +1411,21 @@ declare class GameObject {
 
   /**
      * Sets the state of a [GameObject]
-     * <pre>
+     * ```typescript
      * enum GOState
      * {
      *     GO_STATE_ACTIVE             = 0,                        // show in world as used and not reset (closed door open)
      *     GO_STATE_READY              = 1,                        // show in world as ready (closed door close)
      *     GO_STATE_ACTIVE_ALTERNATIVE = 2                         // show in world as used in alt way and not reset (closed door open by cannon fire)
      * };
-     * </pre>
+     * ```
      */
   SetGoState(state: GOState): void;
 
   /**
      * Sets the [LootState] of a [GameObject]
      * Below are [LootState]s off of 3.3.5a
-     * <pre>
+     * ```typescript
      * enum LootState
      * {
      *     GO_NOT_READY = 0,
@@ -1409,7 +1433,7 @@ declare class GameObject {
      *     GO_ACTIVATED,
      *     GO_JUST_DEACTIVATED
      * };
-     * </pre>
+     * ```
      */
   SetLootState(state: LootState): void;
 
@@ -1426,6 +1450,7 @@ declare class GameObject {
 }
 
 // Global functions
+// These functions can be used anywhere at any time, including at start-up.
 
 /**
  * Adds a taxi path to a specified map, returns the used pathId.
@@ -1950,7 +1975,7 @@ declare function PrintInfo(...args: number[]): void;
 
 /**
  * Registers a [BattleGround] event handler.
- * <pre>
+ * ```typescript
  * enum BGEvents
  * {
  *     BG_EVENT_ON_START                               = 1,    // (event, bg, bgId, instanceId) - Needs to be added to TC
@@ -1959,17 +1984,17 @@ declare function PrintInfo(...args: number[]): void;
  *     BG_EVENT_ON_PRE_DESTROY                         = 4,    // (event, bg, bgId, instanceId) - Needs to be added to TC
  *     BG_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterBGEvent(
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Creature] event handler.
- * <pre>
+ * ```typescript
  * enum CreatureEvents
  * {
  *     CREATURE_EVENT_ON_ENTER_COMBAT                    = 1,  // (event, creature, target) - Can return true to stop normal action
@@ -2011,36 +2036,36 @@ declare function RegisterBGEvent(
  *     CREATURE_EVENT_ON_REMOVE                          = 37, // (event, creature)
  *     CREATURE_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterCreatureEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Creature] gossip event handler.
- * <pre>
+ * ```typescript
  * enum GossipEvents
  * {
  *     GOSSIP_EVENT_ON_HELLO                           = 1,    // (event, player, object) - Object is the Creature/GameObject/Item. Can return false to do default action. For item gossip can return false to stop spell casting.
  *     GOSSIP_EVENT_ON_SELECT                          = 2,    // (event, player, object, sender, intid, code, menu_id) - Object is the Creature/GameObject/Item/Player, menu_id is only for player gossip. Can return false to do default action.
  *     GOSSIP_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterCreatureGossipEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [GameObject] event handler.
- * <pre>
+ * ```typescript
  * enum GameObjectEvents
  * {
  *     GAMEOBJECT_EVENT_ON_AIUPDATE                    = 1,    // (event, go, diff)
@@ -2059,36 +2084,36 @@ declare function RegisterCreatureGossipEvent(
  *     GAMEOBJECT_EVENT_ON_USE                         = 14,   // (event, go, player) - Can return true to stop normal action
  *     GAMEOBJECT_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterGameObjectEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [GameObject] gossip event handler.
- * <pre>
+ * ```typescript
  * enum GossipEvents
  * {
  *     GOSSIP_EVENT_ON_HELLO                           = 1,    // (event, player, object) - Object is the Creature/GameObject/Item. Can return false to do default action. For item gossip can return false to stop spell casting.
  *     GOSSIP_EVENT_ON_SELECT                          = 2,    // (event, player, object, sender, intid, code, menu_id) - Object is the Creature/GameObject/Item/Player, menu_id is only for player gossip. Can return false to do default action.
  *     GOSSIP_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterGameObjectGossipEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Group] event handler.
- * <pre>
+ * ```typescript
  * enum GroupEvents
  * {
  *     // Group
@@ -2100,17 +2125,17 @@ declare function RegisterGameObjectGossipEvent(
  *     GROUP_EVENT_ON_CREATE                   =     6,       // (event, group, leaderGuid, groupType)
  *     GROUP_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterGroupEvent(
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Guild] event handler.
- * <pre>
+ * ```typescript
  * enum GuildEvents
  * {
  *     // Guild
@@ -2127,17 +2152,17 @@ declare function RegisterGroupEvent(
  *     GUILD_EVENT_ON_BANK_EVENT               =     11,      // (event, guild, eventType, tabId, playerGUIDLow, itemOrMoney, itemStackCount, destTabId)
  *     GUILD_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterGuildEvent(
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Map] event handler for one instance of a [Map].
- * <pre>
+ * ```typescript
  * enum InstanceEvents
  * {
  *     INSTANCE_EVENT_ON_INITIALIZE                    = 1,    // (event, instance_data, map)
@@ -2149,18 +2174,18 @@ declare function RegisterGuildEvent(
  *     INSTANCE_EVENT_ON_CHECK_ENCOUNTER_IN_PROGRESS   = 7,    // (event, instance_data, map)
  *     INSTANCE_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterInstanceEvent(
   instance_id: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): void;
 
 /**
  * Registers an [Item] event handler.
- * <pre>
+ * ```typescript
  * enum ItemEvents
  * {
  *     ITEM_EVENT_ON_DUMMY_EFFECT                      = 1,    // (event, caster, spellid, effindex, item)
@@ -2170,36 +2195,36 @@ declare function RegisterInstanceEvent(
  *     ITEM_EVENT_ON_REMOVE                            = 5,    // (event, player, item) - Can return true
  *     ITEM_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterItemEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers an [Item] gossip event handler.
- * <pre>
+ * ```typescript
  * enum GossipEvents
  * {
  *     GOSSIP_EVENT_ON_HELLO                           = 1,    // (event, player, object) - Object is the Creature/GameObject/Item. Can return false to do default action. For item gossip can return false to stop spell casting.
  *     GOSSIP_EVENT_ON_SELECT                          = 2,    // (event, player, object, sender, intid, code, menu_id) - Object is the Creature/GameObject/Item/Player, menu_id is only for player gossip. Can return false to do default action.
  *     GOSSIP_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterItemGossipEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Map] event handler for all instance of a [Map].
- * <pre>
+ * ```typescript
  * enum InstanceEvents
  * {
  *     INSTANCE_EVENT_ON_INITIALIZE                    = 1,    // (event, instance_data, map)
@@ -2211,18 +2236,18 @@ declare function RegisterItemGossipEvent(
  *     INSTANCE_EVENT_ON_CHECK_ENCOUNTER_IN_PROGRESS   = 7,    // (event, instance_data, map)
  *     INSTANCE_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterMapEvent(
   map_id: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): void;
 
 /**
  * Registers a [WorldPacket] event handler.
- * <pre>
+ * ```typescript
  * enum PacketEvents
  * {
  *     PACKET_EVENT_ON_PACKET_RECEIVE          =     5,       // (event, packet, player) - Player only if accessible. Can return false, newPacket
@@ -2230,18 +2255,20 @@ declare function RegisterMapEvent(
  *     PACKET_EVENT_ON_PACKET_SEND             =     7,       // (event, packet, player) - Player only if accessible. Can return false, newPacket
  *     PACKET_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterPacketEvent(
   entry: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
+ * @noself
+ *
  * Registers a [Player] event handler.
- * <pre>
+ * ```typescript
  * enum PlayerEvents
  * {
  *     PLAYER_EVENT_ON_CHARACTER_CREATE        =     1,        // (event, player)
@@ -2288,30 +2315,30 @@ declare function RegisterPacketEvent(
  *     // UNUSED                               =     41,       // (event, player)
  *     PLAYER_EVENT_ON_COMMAND                 =     42,       // (event, player, command) - player is nil if command used from console. Can return false
  * };
- * </pre>
+ * ```
  */
 declare function RegisterPlayerEvent(
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Player] gossip event handler.
  * Note that you can not use `GOSSIP_EVENT_ON_HELLO` with this hook. It does nothing since players dont have an "on hello".
- * <pre>
+ * ```typescript
  * enum GossipEvents
  * {
  *     GOSSIP_EVENT_ON_HELLO                           = 1,    // (event, player, object) - Object is the Creature/GameObject/Item. Can return false to do default action. For item gossip can return false to stop spell casting.
  *     GOSSIP_EVENT_ON_SELECT                          = 2,    // (event, player, object, sender, intid, code, menu_id) - Object is the Creature/GameObject/Item/Player, menu_id is only for player gossip. Can return false to do default action.
  *     GOSSIP_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterPlayerGossipEvent(
   menu_id: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
@@ -2367,13 +2394,13 @@ declare function RegisterPlayerGossipEvent(
  */
 declare function RegisterServerEvent(
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
 /**
  * Registers a [Creature] event handler for a *single* [Creature].
- * <pre>
+ * ```typescript
  * enum CreatureEvents
  * {
  *     CREATURE_EVENT_ON_ENTER_COMBAT                    = 1,  // (event, creature, target) - Can return true to stop normal action
@@ -2415,13 +2442,13 @@ declare function RegisterServerEvent(
  *     CREATURE_EVENT_ON_REMOVE                          = 37, // (event, creature)
  *     CREATURE_EVENT_COUNT
  * };
- * </pre>
+ * ```
  */
 declare function RegisterUniqueCreatureEvent(
   guid: number,
   instance_id: number,
   event: number,
-  func: (...args: any[]) => any,
+  func: (this:void, ...args: any[]) => any,
   shots?: number,
 ): (...args: any[]) => any;
 
@@ -2635,7 +2662,7 @@ declare class Group {
 
   /**
      * Removes a [Player] from this [Group] and returns 'true' if successful
-     * <pre>
+     * ```typescript
      * enum RemoveMethod
      * {
      *     GROUP_REMOVEMETHOD_DEFAULT  = 0,
@@ -2643,7 +2670,7 @@ declare class Group {
      *     GROUP_REMOVEMETHOD_LEAVE    = 2,
      *     GROUP_REMOVEMETHOD_KICK_LFG = 3
      * };
-     * </pre>
+     * ```
      */
   RemoveMember(guid: number, method: RemoveMethod): boolean;
 
@@ -2761,7 +2788,7 @@ declare class Guild {
   SetMemberRank(player: Player, rankId: number): void;
 }
 
-declare class Item {
+declare class Item extends EObject {
   /**
      * Returns 'true' if the [Item] can be traded, 'false' otherwise
      */
@@ -2834,7 +2861,7 @@ declare class Item {
 
   /**
      * Returns the chat link of the [Item]
-     * <pre>
+     * ```typescript
      * enum LocaleConstant
      * {
      *     LOCALE_enUS = 0,
@@ -2847,7 +2874,7 @@ declare class Item {
      *     LOCALE_esMX = 7,
      *     LOCALE_ruRU = 8
      * };
-     * </pre>
+     * ```
      */
   GetItemLink(locale?: LocaleConstant): string;
 
@@ -3037,6 +3064,11 @@ declare class Item {
   SetOwner(player: Player): void;
 }
 
+/**
+A game map, e.g. Azeroth, Eastern Kingdoms, the Molten Core, etc.
+
+NOTE: The prefix E (Entity) is needed to avoid collision with the typescript Map keyword
+ */
 declare class EMap {
   /**
      * Returns the area ID of the [Map] at the specified X, Y, and Z coordinates.
@@ -3148,6 +3180,16 @@ declare class EMap {
   SetWeather(zone: number, type: WeatherType, grade: number): void;
 }
 
+/**
+A basic game object (either an Item or a WorldObject).
+
+Objects in MaNGOS/Trinity are stored an a giant block of "values". Subclasses of Object, like WorldObject, extend the block with more data specific to that subclass. Further subclasses, like Player, extend it even further.
+
+A detailed map of all the fields in this data block can be found in the UpdateFields.h file of your emulator (it varies depending on the expansion supported).
+
+The GetValue methods in this class (e.g. Object:GetInt32Value) provide low-level access to the data block. Other methods, like Object:HasFlag and Object:GetScale, merely wrap the GetValue methods and provide a simpler interface.
+
+ */
 declare class EObject {
   /**
      * Returns the data at the specified index and offset, casted to an unsigned 8-bit integer.
@@ -3326,7 +3368,7 @@ declare class EObject {
   UpdateUInt32Value(index: number, value: number): void;
 }
 
-declare class Player {
+declare class Player extends Unit {
   /**
      * Adds combo points to the [Player]
      */
@@ -3691,7 +3733,7 @@ declare class Player {
 
   /**
      * Returns an item in given bag on given slot.
-     * <pre>
+     * ```typescript
      * Possible and most commonly used combinations:
      * bag = 255
      * slots 0-18 equipment
@@ -3704,7 +3746,7 @@ declare class Player {
      * slots 0-35 for equipped bags
      * bag = 67-74
      * slots 0-35 for bank bags
-     * </pre>
+     * ```
      */
   GetItemByPos(bag: number, slot: number): Item;
 
@@ -4284,7 +4326,7 @@ declare class Player {
   /**
      * Sends say text from the [Player]
      */
-  Say(text: string, lang: number): void;
+  Say(text: string, lang: Language): void;
 
   /**
      * Sends addon message to the [Player] receiver
@@ -4604,7 +4646,7 @@ declare class Player {
   /**
      * Sends yell text from the [Player]
      */
-  Yell(text: string, lang: number): void;
+  Yell(text: string, lang: Language): void;
 }
 
 declare class Quest {
@@ -4652,7 +4694,7 @@ declare class Quest {
   /**
      * Returns 'true' if the [Quest] has the specified flag, false otherwise.
      * Below flags are based off of 3.3.5a. Subject to change.
-     * <pre>
+     * ```typescript
      * enum QuestFlags
      * {
      *     // Flags used at server and sent to client
@@ -4679,7 +4721,7 @@ declare class Quest {
      *     QUEST_FLAGS_AUTO_ACCEPT             = 0x80000,   // The client recognizes this flag as auto-accept. However, NONE of the current quests (3.3.5a) have this flag. Maybe blizz used to use it, or will use it in the future.
      *     // ... 4.x added flags up to 0x80000000 - all unknown for now
      * };
-     * </pre>
+     * ```
      */
   HasFlag(flag: QuestFlags): boolean;
 
@@ -4694,6 +4736,9 @@ declare class Quest {
   IsRepeatable(): boolean;
 }
 
+/**
+An instance of a spell, created when the spell is cast by a Unit.
+ */
 declare class Spell {
   /**
      * Cancels the [Spell].
@@ -4762,7 +4807,7 @@ declare class Spell {
   SetAutoRepeat(repeat: boolean): void;
 }
 
-declare class Unit {
+declare class Unit extends WorldObject {
   /**
      * Adds the [Aura] of the given spell entry on the given target from the [Unit].
      */
@@ -4770,7 +4815,7 @@ declare class Unit {
 
   /**
      * Adds threat to the [Unit] from the victim.
-     * <pre>
+     * ```typescript
      * enum SpellSchoolMask
      * {
      *     SPELL_SCHOOL_MASK_NONE    = 0,
@@ -4782,7 +4827,7 @@ declare class Unit {
      *     SPELL_SCHOOL_MASK_SHADOW  = 32,
      *     SPELL_SCHOOL_MASK_ARCANE  = 64,
      * }
-     * </pre>
+     * ```
      */
   AddThreat(
     victim: Unit,
@@ -4870,7 +4915,7 @@ declare class Unit {
 
   /**
      * Makes the [Unit] damage the target [Unit]
-     * <pre>
+     * ```typescript
      * enum SpellSchools
      * {
      *     SPELL_SCHOOL_NORMAL  = 0,
@@ -4882,7 +4927,7 @@ declare class Unit {
      *     SPELL_SCHOOL_ARCANE  = 6,
      *     MAX_SPELL_SCHOOL     = 7
      * };
-     * </pre>
+     * ```
      */
   DealDamage(
     target: Unit,
@@ -4939,7 +4984,7 @@ declare class Unit {
 
   /**
      * Returns the [Unit]'s class' name in given or default locale or nil.
-     * <pre>
+     * ```typescript
      * enum LocaleConstant
      * {
      *     LOCALE_enUS = 0,
@@ -4952,7 +4997,7 @@ declare class Unit {
      *     LOCALE_esMX = 7,
      *     LOCALE_ruRU = 8
      * };
-     * </pre>
+     * ```
      */
   GetClassAsString(locale?: LocaleConstant): string;
 
@@ -4978,7 +5023,7 @@ declare class Unit {
 
   /**
      * Returns the [Unit]'s creature type ID (enumerated in CreatureType.dbc).
-     * <pre>
+     * ```typescript
      * enum CreatureType
      * {
      *     CREATURE_TYPE_BEAST            = 1,
@@ -4995,7 +5040,7 @@ declare class Unit {
      *     CREATURE_TYPE_NON_COMBAT_PET   = 12,     // This and below is TBC+
      *     CREATURE_TYPE_GAS_CLOUD        = 13
      * };
-     * </pre>
+     * ```
      */
   GetCreatureType(): CreatureType;
 
@@ -5006,7 +5051,7 @@ declare class Unit {
 
   /**
      * Returns the currently casted [Spell] of given type or nil.
-     * <pre>
+     * ```typescript
      * enum CurrentSpellTypes
      * {
      *     CURRENT_MELEE_SPELL             = 0,
@@ -5014,7 +5059,7 @@ declare class Unit {
      *     CURRENT_CHANNELED_SPELL         = 2,
      *     CURRENT_AUTOREPEAT_SPELL        = 3
      * };
-     * </pre>
+     * ```
      */
   GetCurrentSpell(spellType: CurrentSpellTypes): Spell;
 
@@ -5083,7 +5128,7 @@ declare class Unit {
 
   /**
      * Returns the current movement type for this [Unit].
-     * <pre>
+     * ```typescript
      * enum MovementGeneratorType
      * {
      *     IDLE_MOTION_TYPE                = 0,
@@ -5107,7 +5152,7 @@ declare class Unit {
      *     EFFECT_MOTION_TYPE              = 16, // TC
      *     NULL_MOTION_TYPE                = 17, // TC
      * };
-     * </pre>
+     * ```
      */
   GetMovementType(): MovementGeneratorType;
 
@@ -5192,7 +5237,7 @@ declare class Unit {
 
   /**
      * Returns the [Unit]'s race's name in given or default locale or nil.
-     * <pre>
+     * ```typescript
      * enum LocaleConstant
      * {
      *     LOCALE_enUS = 0,
@@ -5205,7 +5250,7 @@ declare class Unit {
      *     LOCALE_esMX = 7,
      *     LOCALE_ruRU = 8
      * };
-     * </pre>
+     * ```
      */
   GetRaceAsString(locale?: LocaleConstant): string;
 
@@ -5216,7 +5261,7 @@ declare class Unit {
 
   /**
      * Returns the [Unit]'s speed of given [UnitMoveType].
-     * <pre>
+     * ```typescript
      * enum UnitMoveType
      * {
      *     MOVE_WALK           = 0,
@@ -5229,7 +5274,7 @@ declare class Unit {
      *     MOVE_FLIGHT_BACK    = 7,
      *     MOVE_PITCH_RATE     = 8
      * };
-     * </pre>
+     * ```
      */
   GetSpeed(type: UnitMoveType): number;
 
@@ -5574,8 +5619,8 @@ declare class Unit {
      * Sends chat message to [Player]
      */
   SendChatMessageToPlayer(
-    type: number,
-    lang: number,
+    type: ChatMsg,
+    lang: Language,
     msg: string,
     target: Player,
   ): void;
@@ -5588,7 +5633,7 @@ declare class Unit {
   /**
      * The [Unit] will say the message
      */
-  SendUnitSay(msg: string, language: number): void;
+  SendUnitSay(msg: string, language: Language): void;
 
   /**
      * The [Unit] will whisper the message to a [Player]
@@ -5603,7 +5648,7 @@ declare class Unit {
   /**
      * The [Unit] will yell the message
      */
-  SendUnitYell(msg: string, language: number): void;
+  SendUnitYell(msg: string, language: Language): void;
 
   /**
      * Confuses the [Unit], if 'false' specified, the [Unit] is no longer confused.
@@ -5768,7 +5813,7 @@ declare class Unit {
   /**
      * Sets the [Unit]'s speed of given [UnitMoveType] to given rate.
      * If forced, packets sent to clients forcing the visual change.
-     * <pre>
+     * ```typescript
      * enum UnitMoveType
      * {
      *     MOVE_WALK           = 0,
@@ -5781,7 +5826,7 @@ declare class Unit {
      *     MOVE_FLIGHT_BACK    = 7,
      *     MOVE_PITCH_RATE     = 8
      * };
-     * </pre>
+     * ```
      */
   SetSpeed(type: UnitMoveType, rate: number, forced?: boolean): void;
 
@@ -5833,7 +5878,7 @@ declare class Vehicle {
   RemovePassenger(passenger: Unit): void;
 }
 
-declare class WorldObject {
+declare class WorldObject extends EObject {
   /**
      * Returns the angle between this [WorldObject] and another [WorldObject] or a point.
      * The angle is the angle between two points and orientation will be ignored.
@@ -6192,6 +6237,13 @@ declare class WorldObject {
   ): GameObject;
 }
 
+/**
+A packet used to pass messages between the server and a client.
+
+Each packet has an opcode that determines the type of message being sent, e.g. if a CMSG_LOGOUT_REQUEST packet is sent to the server, the client has sent a message that its Player wants to logout.
+
+The packet can contain further data, the format of which depends on the opcode.
+ */
 declare class WorldPacket {
   /**
      * Returns the opcode of the [WorldPacket].

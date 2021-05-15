@@ -1834,36 +1834,36 @@ end
 end,
 ["HookHelpers.BattleGroundHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterBattleGroundOnBGStart(hook, shots)
+function ____exports.RegisterBattleGroundOnBGStart(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterBGEvent(
         nil,
         1,
-        function(____, event, bg, bgId, instanceId) return hook(nil, event, bg, bgId, instanceId) end,
+        function(event, bg, bgId, instanceId) return hook(nil, event, bg, bgId, instanceId) end,
         shots
     )
 end
-function ____exports.RegisterBattleGroundOnBGCreate(hook, shots)
+function ____exports.RegisterBattleGroundOnBGCreate(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterBGEvent(
         nil,
         3,
-        function(____, event, bg, bgId, instanceId) return hook(nil, event, bg, bgId, instanceId) end,
+        function(event, bg, bgId, instanceId) return hook(nil, event, bg, bgId, instanceId) end,
         shots
     )
 end
-function ____exports.RegisterBattleGroundOnBGDestroy(hook, shots)
+function ____exports.RegisterBattleGroundOnBGDestroy(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterBGEvent(
         nil,
         4,
-        function(____, event, bg, bgId, instanceId) return hook(nil, event, bg, bgId, instanceId) end,
+        function(event, bg, bgId, instanceId) return hook(nil, event, bg, bgId, instanceId) end,
         shots
     )
 end
@@ -1871,7 +1871,7 @@ return ____exports
 end,
 ["HookHelpers.CreatureHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterCreatureOnDummyEffect(entry, hook, shots)
+function ____exports.RegisterCreatureOnDummyEffect(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1879,11 +1879,11 @@ function ____exports.RegisterCreatureOnDummyEffect(entry, hook, shots)
         nil,
         entry,
         30,
-        function(____, event, pCaster, spellId, effIndex, pTarget) return hook(nil, event, pCaster, spellId, effIndex, pTarget) end,
+        function(event, pCaster, spellId, effIndex, pTarget) return hook(nil, event, pCaster, spellId, effIndex, pTarget) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOnQuestAccept(entry, hook, shots)
+function ____exports.RegisterCreatureOnQuestAccept(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1891,11 +1891,11 @@ function ____exports.RegisterCreatureOnQuestAccept(entry, hook, shots)
         nil,
         entry,
         31,
-        function(____, event, pPlayer, pCreature, pQuest) return hook(nil, event, pPlayer, pCreature, pQuest) end,
+        function(event, pPlayer, pCreature, pQuest) return hook(nil, event, pPlayer, pCreature, pQuest) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOnQuestReward(entry, hook, shots)
+function ____exports.RegisterCreatureOnQuestReward(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1903,11 +1903,11 @@ function ____exports.RegisterCreatureOnQuestReward(entry, hook, shots)
         nil,
         entry,
         34,
-        function(____, event, pPlayer, pCreature, pQuest, opt) return hook(nil, event, pPlayer, pCreature, pQuest, opt) end,
+        function(event, pPlayer, pCreature, pQuest, opt) return hook(nil, event, pPlayer, pCreature, pQuest, opt) end,
         shots
     )
 end
-function ____exports.RegisterCreatureGetDialogStatus(entry, hook, shots)
+function ____exports.RegisterCreatureGetDialogStatus(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1915,11 +1915,11 @@ function ____exports.RegisterCreatureGetDialogStatus(entry, hook, shots)
         nil,
         entry,
         35,
-        function(____, event, pPlayer, pCreature) return hook(nil, event, pPlayer, pCreature) end,
+        function(event, pPlayer, pCreature) return hook(nil, event, pPlayer, pCreature) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOnAddToWorld(entry, hook, shots)
+function ____exports.RegisterCreatureOnAddToWorld(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1927,11 +1927,11 @@ function ____exports.RegisterCreatureOnAddToWorld(entry, hook, shots)
         nil,
         entry,
         36,
-        function(____, event, pCreature) return hook(nil, event, pCreature) end,
+        function(event, pCreature) return hook(nil, event, pCreature) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOnRemoveFromWorld(entry, hook, shots)
+function ____exports.RegisterCreatureOnRemoveFromWorld(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1939,11 +1939,11 @@ function ____exports.RegisterCreatureOnRemoveFromWorld(entry, hook, shots)
         nil,
         entry,
         37,
-        function(____, event, pCreature) return hook(nil, event, pCreature) end,
+        function(event, pCreature) return hook(nil, event, pCreature) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOnSummoned(entry, hook, shots)
+function ____exports.RegisterCreatureOnSummoned(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1951,11 +1951,11 @@ function ____exports.RegisterCreatureOnSummoned(entry, hook, shots)
         nil,
         entry,
         22,
-        function(____, event, pCreature, pSummoner) return hook(nil, event, pCreature, pSummoner) end,
+        function(event, pCreature, pSummoner) return hook(nil, event, pCreature, pSummoner) end,
         shots
     )
 end
-function ____exports.RegisterCreatureUpdateAI(entry, hook, shots)
+function ____exports.RegisterCreatureUpdateAI(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1963,11 +1963,11 @@ function ____exports.RegisterCreatureUpdateAI(entry, hook, shots)
         nil,
         entry,
         7,
-        function(____, event, me, diff) return hook(nil, event, me, diff) end,
+        function(event, me, diff) return hook(nil, event, me, diff) end,
         shots
     )
 end
-function ____exports.RegisterCreatureEnterCombat(entry, hook, shots)
+function ____exports.RegisterCreatureEnterCombat(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1975,11 +1975,11 @@ function ____exports.RegisterCreatureEnterCombat(entry, hook, shots)
         nil,
         entry,
         1,
-        function(____, event, me, target) return hook(nil, event, me, target) end,
+        function(event, me, target) return hook(nil, event, me, target) end,
         shots
     )
 end
-function ____exports.RegisterCreatureDamageTaken(entry, hook, shots)
+function ____exports.RegisterCreatureDamageTaken(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1987,11 +1987,11 @@ function ____exports.RegisterCreatureDamageTaken(entry, hook, shots)
         nil,
         entry,
         9,
-        function(____, event, me, attacker, damage) return hook(nil, event, me, attacker, damage) end,
+        function(event, me, attacker, damage) return hook(nil, event, me, attacker, damage) end,
         shots
     )
 end
-function ____exports.RegisterCreatureJustDied(entry, hook, shots)
+function ____exports.RegisterCreatureJustDied(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -1999,11 +1999,11 @@ function ____exports.RegisterCreatureJustDied(entry, hook, shots)
         nil,
         entry,
         4,
-        function(____, event, me, killer) return hook(nil, event, me, killer) end,
+        function(event, me, killer) return hook(nil, event, me, killer) end,
         shots
     )
 end
-function ____exports.RegisterCreatureKilledUnit(entry, hook, shots)
+function ____exports.RegisterCreatureKilledUnit(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2011,11 +2011,11 @@ function ____exports.RegisterCreatureKilledUnit(entry, hook, shots)
         nil,
         entry,
         3,
-        function(____, event, me, victim) return hook(nil, event, me, victim) end,
+        function(event, me, victim) return hook(nil, event, me, victim) end,
         shots
     )
 end
-function ____exports.RegisterCreatureJustSummoned(entry, hook, shots)
+function ____exports.RegisterCreatureJustSummoned(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2023,11 +2023,11 @@ function ____exports.RegisterCreatureJustSummoned(entry, hook, shots)
         nil,
         entry,
         19,
-        function(____, event, me, summon) return hook(nil, event, me, summon) end,
+        function(event, me, summon) return hook(nil, event, me, summon) end,
         shots
     )
 end
-function ____exports.RegisterCreatureSummonedCreatureDespawn(entry, hook, shots)
+function ____exports.RegisterCreatureSummonedCreatureDespawn(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2035,11 +2035,11 @@ function ____exports.RegisterCreatureSummonedCreatureDespawn(entry, hook, shots)
         nil,
         entry,
         20,
-        function(____, event, me, summon) return hook(nil, event, me, summon) end,
+        function(event, me, summon) return hook(nil, event, me, summon) end,
         shots
     )
 end
-function ____exports.RegisterCreatureMovementInform(entry, hook, shots)
+function ____exports.RegisterCreatureMovementInform(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2047,11 +2047,11 @@ function ____exports.RegisterCreatureMovementInform(entry, hook, shots)
         nil,
         entry,
         6,
-        function(____, event, me, ____type, id) return hook(nil, event, me, ____type, id) end,
+        function(event, me, ____type, id) return hook(nil, event, me, ____type, id) end,
         shots
     )
 end
-function ____exports.RegisterCreatureAttackStart(entry, hook, shots)
+function ____exports.RegisterCreatureAttackStart(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2059,11 +2059,11 @@ function ____exports.RegisterCreatureAttackStart(entry, hook, shots)
         nil,
         entry,
         10,
-        function(____, event, me, target) return hook(nil, event, me, target) end,
+        function(event, me, target) return hook(nil, event, me, target) end,
         shots
     )
 end
-function ____exports.RegisterCreatureEnterEvadeMode(entry, hook, shots)
+function ____exports.RegisterCreatureEnterEvadeMode(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2071,11 +2071,11 @@ function ____exports.RegisterCreatureEnterEvadeMode(entry, hook, shots)
         nil,
         entry,
         2,
-        function(____, event, me) return hook(nil, event, me) end,
+        function(event, me) return hook(nil, event, me) end,
         shots
     )
 end
-function ____exports.RegisterCreatureJustRespawned(entry, hook, shots)
+function ____exports.RegisterCreatureJustRespawned(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2083,11 +2083,11 @@ function ____exports.RegisterCreatureJustRespawned(entry, hook, shots)
         nil,
         entry,
         5,
-        function(____, event, me) return hook(nil, event, me) end,
+        function(event, me) return hook(nil, event, me) end,
         shots
     )
 end
-function ____exports.RegisterCreatureJustReachedHome(entry, hook, shots)
+function ____exports.RegisterCreatureJustReachedHome(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2095,11 +2095,11 @@ function ____exports.RegisterCreatureJustReachedHome(entry, hook, shots)
         nil,
         entry,
         24,
-        function(____, event, me) return hook(nil, event, me) end,
+        function(event, me) return hook(nil, event, me) end,
         shots
     )
 end
-function ____exports.RegisterCreatureReceiveEmote(entry, hook, shots)
+function ____exports.RegisterCreatureReceiveEmote(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2107,11 +2107,11 @@ function ____exports.RegisterCreatureReceiveEmote(entry, hook, shots)
         nil,
         entry,
         8,
-        function(____, event, me, player, emoteId) return hook(nil, event, me, player, emoteId) end,
+        function(event, me, player, emoteId) return hook(nil, event, me, player, emoteId) end,
         shots
     )
 end
-function ____exports.RegisterCreatureCorpseRemoved(entry, hook, shots)
+function ____exports.RegisterCreatureCorpseRemoved(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2119,11 +2119,11 @@ function ____exports.RegisterCreatureCorpseRemoved(entry, hook, shots)
         nil,
         entry,
         26,
-        function(____, event, me, respawnDelay) return hook(nil, event, me, respawnDelay) end,
+        function(event, me, respawnDelay) return hook(nil, event, me, respawnDelay) end,
         shots
     )
 end
-function ____exports.RegisterCreatureMoveInLineOfSight(entry, hook, shots)
+function ____exports.RegisterCreatureMoveInLineOfSight(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2131,11 +2131,11 @@ function ____exports.RegisterCreatureMoveInLineOfSight(entry, hook, shots)
         nil,
         entry,
         27,
-        function(____, event, me, who) return hook(nil, event, me, who) end,
+        function(event, me, who) return hook(nil, event, me, who) end,
         shots
     )
 end
-function ____exports.RegisterCreatureSpellHit(entry, hook, shots)
+function ____exports.RegisterCreatureSpellHit(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2143,11 +2143,11 @@ function ____exports.RegisterCreatureSpellHit(entry, hook, shots)
         nil,
         entry,
         14,
-        function(____, event, me, caster, spell) return hook(nil, event, me, caster, spell) end,
+        function(event, me, caster, spell) return hook(nil, event, me, caster, spell) end,
         shots
     )
 end
-function ____exports.RegisterCreatureSpellHitTarget(entry, hook, shots)
+function ____exports.RegisterCreatureSpellHitTarget(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2155,11 +2155,11 @@ function ____exports.RegisterCreatureSpellHitTarget(entry, hook, shots)
         nil,
         entry,
         15,
-        function(____, event, me, target, spell) return hook(nil, event, me, target, spell) end,
+        function(event, me, target, spell) return hook(nil, event, me, target, spell) end,
         shots
     )
 end
-function ____exports.RegisterCreatureSummonedCreatureDies(entry, hook, shots)
+function ____exports.RegisterCreatureSummonedCreatureDies(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2167,11 +2167,11 @@ function ____exports.RegisterCreatureSummonedCreatureDies(entry, hook, shots)
         nil,
         entry,
         21,
-        function(____, event, me, summon, killer) return hook(nil, event, me, summon, killer) end,
+        function(event, me, summon, killer) return hook(nil, event, me, summon, killer) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOwnerAttackedBy(entry, hook, shots)
+function ____exports.RegisterCreatureOwnerAttackedBy(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2179,11 +2179,11 @@ function ____exports.RegisterCreatureOwnerAttackedBy(entry, hook, shots)
         nil,
         entry,
         13,
-        function(____, event, me, attacker) return hook(nil, event, me, attacker) end,
+        function(event, me, attacker) return hook(nil, event, me, attacker) end,
         shots
     )
 end
-function ____exports.RegisterCreatureOwnerAttacked(entry, hook, shots)
+function ____exports.RegisterCreatureOwnerAttacked(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2191,7 +2191,7 @@ function ____exports.RegisterCreatureOwnerAttacked(entry, hook, shots)
         nil,
         entry,
         12,
-        function(____, event, me, target) return hook(nil, event, me, target) end,
+        function(event, me, target) return hook(nil, event, me, target) end,
         shots
     )
 end
@@ -2199,7 +2199,7 @@ return ____exports
 end,
 ["HookHelpers.GameObjectHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterGameObjectOnDummyEffect(entry, hook, shots)
+function ____exports.RegisterGameObjectOnDummyEffect(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2207,11 +2207,11 @@ function ____exports.RegisterGameObjectOnDummyEffect(entry, hook, shots)
         nil,
         entry,
         3,
-        function(____, event, pCaster, spellId, effIndex, pTarget) return hook(nil, event, pCaster, spellId, effIndex, pTarget) end,
+        function(event, pCaster, spellId, effIndex, pTarget) return hook(nil, event, pCaster, spellId, effIndex, pTarget) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectUpdateAI(entry, hook, shots)
+function ____exports.RegisterGameObjectUpdateAI(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2219,11 +2219,11 @@ function ____exports.RegisterGameObjectUpdateAI(entry, hook, shots)
         nil,
         entry,
         1,
-        function(____, event, pGameObject, diff) return hook(nil, event, pGameObject, diff) end,
+        function(event, pGameObject, diff) return hook(nil, event, pGameObject, diff) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnQuestAccept(entry, hook, shots)
+function ____exports.RegisterGameObjectOnQuestAccept(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2231,11 +2231,11 @@ function ____exports.RegisterGameObjectOnQuestAccept(entry, hook, shots)
         nil,
         entry,
         4,
-        function(____, event, pPlayer, pGameObject, pQuest) return hook(nil, event, pPlayer, pGameObject, pQuest) end,
+        function(event, pPlayer, pGameObject, pQuest) return hook(nil, event, pPlayer, pGameObject, pQuest) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnQuestReward(entry, hook, shots)
+function ____exports.RegisterGameObjectOnQuestReward(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2243,11 +2243,11 @@ function ____exports.RegisterGameObjectOnQuestReward(entry, hook, shots)
         nil,
         entry,
         5,
-        function(____, event, pPlayer, pGameObject, pQuest, opt) return hook(nil, event, pPlayer, pGameObject, pQuest, opt) end,
+        function(event, pPlayer, pGameObject, pQuest, opt) return hook(nil, event, pPlayer, pGameObject, pQuest, opt) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectGetDialogStatus(entry, hook, shots)
+function ____exports.RegisterGameObjectGetDialogStatus(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2255,11 +2255,11 @@ function ____exports.RegisterGameObjectGetDialogStatus(entry, hook, shots)
         nil,
         entry,
         6,
-        function(____, event, pPlayer, pGameObject) return hook(nil, event, pPlayer, pGameObject) end,
+        function(event, pPlayer, pGameObject) return hook(nil, event, pPlayer, pGameObject) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnDestroyed(entry, hook, shots)
+function ____exports.RegisterGameObjectOnDestroyed(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2267,11 +2267,11 @@ function ____exports.RegisterGameObjectOnDestroyed(entry, hook, shots)
         nil,
         entry,
         7,
-        function(____, event, pGameObject, attacker) return hook(nil, event, pGameObject, attacker) end,
+        function(event, pGameObject, attacker) return hook(nil, event, pGameObject, attacker) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnDamaged(entry, hook, shots)
+function ____exports.RegisterGameObjectOnDamaged(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2279,11 +2279,11 @@ function ____exports.RegisterGameObjectOnDamaged(entry, hook, shots)
         nil,
         entry,
         8,
-        function(____, event, pGameObject, attacker) return hook(nil, event, pGameObject, attacker) end,
+        function(event, pGameObject, attacker) return hook(nil, event, pGameObject, attacker) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnLootStateChanged(entry, hook, shots)
+function ____exports.RegisterGameObjectOnLootStateChanged(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2291,11 +2291,11 @@ function ____exports.RegisterGameObjectOnLootStateChanged(entry, hook, shots)
         nil,
         entry,
         9,
-        function(____, event, pGameObject, state) return hook(nil, event, pGameObject, state) end,
+        function(event, pGameObject, state) return hook(nil, event, pGameObject, state) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnGameObjectStateChanged(entry, hook, shots)
+function ____exports.RegisterGameObjectOnGameObjectStateChanged(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2303,11 +2303,11 @@ function ____exports.RegisterGameObjectOnGameObjectStateChanged(entry, hook, sho
         nil,
         entry,
         10,
-        function(____, event, pGameObject, state) return hook(nil, event, pGameObject, state) end,
+        function(event, pGameObject, state) return hook(nil, event, pGameObject, state) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnSpawn(entry, hook, shots)
+function ____exports.RegisterGameObjectOnSpawn(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2315,11 +2315,11 @@ function ____exports.RegisterGameObjectOnSpawn(entry, hook, shots)
         nil,
         entry,
         2,
-        function(____, event, pGameObject) return hook(nil, event, pGameObject) end,
+        function(event, pGameObject) return hook(nil, event, pGameObject) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnAddToWorld(entry, hook, shots)
+function ____exports.RegisterGameObjectOnAddToWorld(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2327,11 +2327,11 @@ function ____exports.RegisterGameObjectOnAddToWorld(entry, hook, shots)
         nil,
         entry,
         12,
-        function(____, event, pGameObject) return hook(nil, event, pGameObject) end,
+        function(event, pGameObject) return hook(nil, event, pGameObject) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnRemoveFromWorld(entry, hook, shots)
+function ____exports.RegisterGameObjectOnRemoveFromWorld(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2339,11 +2339,11 @@ function ____exports.RegisterGameObjectOnRemoveFromWorld(entry, hook, shots)
         nil,
         entry,
         13,
-        function(____, event, pGameObject) return hook(nil, event, pGameObject) end,
+        function(event, pGameObject) return hook(nil, event, pGameObject) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectOnGameObjectUse(entry, hook, shots)
+function ____exports.RegisterGameObjectOnGameObjectUse(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2351,7 +2351,7 @@ function ____exports.RegisterGameObjectOnGameObjectUse(entry, hook, shots)
         nil,
         entry,
         14,
-        function(____, event, pPlayer, pGameObject) return hook(nil, event, pPlayer, pGameObject) end,
+        function(event, pPlayer, pGameObject) return hook(nil, event, pPlayer, pGameObject) end,
         shots
     )
 end
@@ -2359,7 +2359,7 @@ return ____exports
 end,
 ["HookHelpers.GossipHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterPlayerGossipOnGossipHello(menuId, hook, shots)
+function ____exports.RegisterPlayerGossipOnGossipHello(self, menuId, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2367,11 +2367,11 @@ function ____exports.RegisterPlayerGossipOnGossipHello(menuId, hook, shots)
         nil,
         menuId,
         1,
-        function(____, event, player, object) return hook(nil, event, player, object) end,
+        function(event, player, object) return hook(nil, event, player, object) end,
         shots
     )
 end
-function ____exports.RegisterPlayerGossipOnGossipSelect(menuId, hook, shots)
+function ____exports.RegisterPlayerGossipOnGossipSelect(self, menuId, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2379,11 +2379,11 @@ function ____exports.RegisterPlayerGossipOnGossipSelect(menuId, hook, shots)
         nil,
         menuId,
         2,
-        function(____, event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code, menuId) end,
+        function(event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code, menuId) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectGossipOnGossipHello(entry, hook, shots)
+function ____exports.RegisterGameObjectGossipOnGossipHello(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2391,11 +2391,11 @@ function ____exports.RegisterGameObjectGossipOnGossipHello(entry, hook, shots)
         nil,
         entry,
         1,
-        function(____, event, player, object) return hook(nil, event, player, object) end,
+        function(event, player, object) return hook(nil, event, player, object) end,
         shots
     )
 end
-function ____exports.RegisterGameObjectGossipOnGossipSelect(entry, hook, shots)
+function ____exports.RegisterGameObjectGossipOnGossipSelect(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2403,11 +2403,11 @@ function ____exports.RegisterGameObjectGossipOnGossipSelect(entry, hook, shots)
         nil,
         entry,
         2,
-        function(____, event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code) end,
+        function(event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code) end,
         shots
     )
 end
-function ____exports.RegisterCreatureGossipOnGossipHello(entry, hook, shots)
+function ____exports.RegisterCreatureGossipOnGossipHello(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2415,11 +2415,11 @@ function ____exports.RegisterCreatureGossipOnGossipHello(entry, hook, shots)
         nil,
         entry,
         1,
-        function(____, event, player, object) return hook(nil, event, player, object) end,
+        function(event, player, object) return hook(nil, event, player, object) end,
         shots
     )
 end
-function ____exports.RegisterCreatureGossipOnGossipSelect(entry, hook, shots)
+function ____exports.RegisterCreatureGossipOnGossipSelect(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2427,11 +2427,11 @@ function ____exports.RegisterCreatureGossipOnGossipSelect(entry, hook, shots)
         nil,
         entry,
         2,
-        function(____, event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code) end,
+        function(event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code) end,
         shots
     )
 end
-function ____exports.RegisterItemGossipOnGossipHello(entry, hook, shots)
+function ____exports.RegisterItemGossipOnGossipHello(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2439,11 +2439,11 @@ function ____exports.RegisterItemGossipOnGossipHello(entry, hook, shots)
         nil,
         entry,
         1,
-        function(____, event, player, object) return hook(nil, event, player, object) end,
+        function(event, player, object) return hook(nil, event, player, object) end,
         shots
     )
 end
-function ____exports.RegisterItemGossipOnGossipSelect(entry, hook, shots)
+function ____exports.RegisterItemGossipOnGossipSelect(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2451,7 +2451,7 @@ function ____exports.RegisterItemGossipOnGossipSelect(entry, hook, shots)
         nil,
         entry,
         2,
-        function(____, event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code) end,
+        function(event, player, object, sender, action, code) return hook(nil, event, player, object, sender, action, code) end,
         shots
     )
 end
@@ -2459,69 +2459,69 @@ return ____exports
 end,
 ["HookHelpers.GroupHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterGroupOnAddMember(hook, shots)
+function ____exports.RegisterGroupOnAddMember(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGroupEvent(
         nil,
         1,
-        function(____, event, group, guid) return hook(nil, event, group, guid) end,
+        function(event, group, guid) return hook(nil, event, group, guid) end,
         shots
     )
 end
-function ____exports.RegisterGroupOnInviteMember(hook, shots)
+function ____exports.RegisterGroupOnInviteMember(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGroupEvent(
         nil,
         2,
-        function(____, event, group, guid) return hook(nil, event, group, guid) end,
+        function(event, group, guid) return hook(nil, event, group, guid) end,
         shots
     )
 end
-function ____exports.RegisterGroupOnRemoveMember(hook, shots)
+function ____exports.RegisterGroupOnRemoveMember(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGroupEvent(
         nil,
         3,
-        function(____, event, group, guid, method) return hook(nil, event, group, guid, method) end,
+        function(event, group, guid, method) return hook(nil, event, group, guid, method) end,
         shots
     )
 end
-function ____exports.RegisterGroupOnChangeLeader(hook, shots)
+function ____exports.RegisterGroupOnChangeLeader(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGroupEvent(
         nil,
         4,
-        function(____, event, group, newLeaderGuid, oldLeaderGuid) return hook(nil, event, group, newLeaderGuid, oldLeaderGuid) end,
+        function(event, group, newLeaderGuid, oldLeaderGuid) return hook(nil, event, group, newLeaderGuid, oldLeaderGuid) end,
         shots
     )
 end
-function ____exports.RegisterGroupOnDisband(hook, shots)
+function ____exports.RegisterGroupOnDisband(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGroupEvent(
         nil,
         5,
-        function(____, event, group) return hook(nil, event, group) end,
+        function(event, group) return hook(nil, event, group) end,
         shots
     )
 end
-function ____exports.RegisterGroupOnCreate(hook, shots)
+function ____exports.RegisterGroupOnCreate(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGroupEvent(
         nil,
         6,
-        function(____, event, group, leaderGuid, groupType) return hook(nil, event, group, leaderGuid, groupType) end,
+        function(event, group, leaderGuid, groupType) return hook(nil, event, group, leaderGuid, groupType) end,
         shots
     )
 end
@@ -2529,7 +2529,7 @@ return ____exports
 end,
 ["HookHelpers.InstanceHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterInstanceOnInitialize(instanceId, hook, shots)
+function ____exports.RegisterInstanceOnInitialize(self, instanceId, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2537,7 +2537,7 @@ function ____exports.RegisterInstanceOnInitialize(instanceId, hook, shots)
         nil,
         instanceId,
         1,
-        function(____, event, instanceData, map) return hook(nil, event, instanceData, map) end,
+        function(event, instanceData, map) return hook(nil, event, instanceData, map) end,
         shots
     )
 end
@@ -2549,7 +2549,7 @@ function ____exports.RegisterInstanceOnLoad(self, instanceId, hook, shots)
         nil,
         instanceId,
         2,
-        function(____, event, instanceData, map) return hook(nil, event, instanceData, map) end,
+        function(event, instanceData, map) return hook(nil, event, instanceData, map) end,
         shots
     )
 end
@@ -2561,7 +2561,7 @@ function ____exports.RegisterInstanceOnUpdateInstance(self, instanceId, hook, sh
         nil,
         instanceId,
         3,
-        function(____, event, instanceData, map, diff) return hook(nil, event, instanceData, map, diff) end,
+        function(event, instanceData, map, diff) return hook(nil, event, instanceData, map, diff) end,
         shots
     )
 end
@@ -2573,7 +2573,7 @@ function ____exports.RegisterInstanceOnPlayerEnterInstance(self, instanceId, hoo
         nil,
         instanceId,
         4,
-        function(____, event, instanceData, map, player) return hook(nil, event, instanceData, map, player) end,
+        function(event, instanceData, map, player) return hook(nil, event, instanceData, map, player) end,
         shots
     )
 end
@@ -2585,7 +2585,7 @@ function ____exports.RegisterInstanceOnCreatureCreate(self, instanceId, hook, sh
         nil,
         instanceId,
         5,
-        function(____, event, instanceData, map, creature) return hook(nil, event, instanceData, map, creature) end,
+        function(event, instanceData, map, creature) return hook(nil, event, instanceData, map, creature) end,
         shots
     )
 end
@@ -2597,7 +2597,7 @@ function ____exports.RegisterInstanceOnGameObjectCreate(self, instanceId, hook, 
         nil,
         instanceId,
         6,
-        function(____, event, instanceData, map, go) return hook(nil, event, instanceData, map, go) end,
+        function(event, instanceData, map, go) return hook(nil, event, instanceData, map, go) end,
         shots
     )
 end
@@ -2609,7 +2609,7 @@ function ____exports.RegisterInstanceOnCheckEncounterInProgress(self, instanceId
         nil,
         instanceId,
         7,
-        function(____, event, instanceData, map) return hook(nil, event, instanceData, map) end,
+        function(event, instanceData, map) return hook(nil, event, instanceData, map) end,
         shots
     )
 end
@@ -2617,7 +2617,7 @@ return ____exports
 end,
 ["HookHelpers.ItemHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterItemOnDummyEffect(entry, hook, shots)
+function ____exports.RegisterItemOnDummyEffect(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2625,11 +2625,11 @@ function ____exports.RegisterItemOnDummyEffect(entry, hook, shots)
         nil,
         entry,
         1,
-        function(____, event, pCaster, spellId, effIndex, pTarget) return hook(nil, event, pCaster, spellId, effIndex, pTarget) end,
+        function(event, pCaster, spellId, effIndex, pTarget) return hook(nil, event, pCaster, spellId, effIndex, pTarget) end,
         shots
     )
 end
-function ____exports.RegisterItemOnQuestAccept(entry, hook, shots)
+function ____exports.RegisterItemOnQuestAccept(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2637,11 +2637,11 @@ function ____exports.RegisterItemOnQuestAccept(entry, hook, shots)
         nil,
         entry,
         3,
-        function(____, event, pPlayer, pItem, pQuest) return hook(nil, event, pPlayer, pItem, pQuest) end,
+        function(event, pPlayer, pItem, pQuest) return hook(nil, event, pPlayer, pItem, pQuest) end,
         shots
     )
 end
-function ____exports.RegisterItemOnItemUse(entry, hook, shots)
+function ____exports.RegisterItemOnItemUse(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2649,11 +2649,11 @@ function ____exports.RegisterItemOnItemUse(entry, hook, shots)
         nil,
         entry,
         2,
-        function(____, event, player, item, target) return hook(nil, event, player, item, target) end,
+        function(event, player, item, target) return hook(nil, event, player, item, target) end,
         shots
     )
 end
-function ____exports.RegisterItemOnExpire(entry, hook, shots)
+function ____exports.RegisterItemOnExpire(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2661,11 +2661,11 @@ function ____exports.RegisterItemOnExpire(entry, hook, shots)
         nil,
         entry,
         4,
-        function(____, event, player, itemdId) return hook(nil, event, player, itemdId) end,
+        function(event, player, itemdId) return hook(nil, event, player, itemdId) end,
         shots
     )
 end
-function ____exports.RegisterItemOnRemove(entry, hook, shots)
+function ____exports.RegisterItemOnRemove(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2673,7 +2673,7 @@ function ____exports.RegisterItemOnRemove(entry, hook, shots)
         nil,
         entry,
         5,
-        function(____, event, pPlayer, pItem) return hook(nil, event, pPlayer, pItem) end,
+        function(event, pPlayer, pItem) return hook(nil, event, pPlayer, pItem) end,
         shots
     )
 end
@@ -2681,7 +2681,7 @@ return ____exports
 end,
 ["HookHelpers.PacketHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterServerOnPacketSendAny(entry, hook, shots)
+function ____exports.RegisterServerOnPacketSendAny(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2689,11 +2689,11 @@ function ____exports.RegisterServerOnPacketSendAny(entry, hook, shots)
         nil,
         entry,
         7,
-        function(____, event, packet, player) return hook(nil, event, packet, player) end,
+        function(event, packet, player) return hook(nil, event, packet, player) end,
         shots
     )
 end
-function ____exports.RegisterPacketOnPacketSendOne(entry, hook, shots)
+function ____exports.RegisterPacketOnPacketSendOne(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2701,11 +2701,11 @@ function ____exports.RegisterPacketOnPacketSendOne(entry, hook, shots)
         nil,
         entry,
         7,
-        function(____, event, player, packet, result) return hook(nil, event, packet, player) end,
+        function(event, player, packet, result) return hook(nil, event, packet, player) end,
         shots
     )
 end
-function ____exports.RegisterServerOnPacketReceiveAny(entry, hook, shots)
+function ____exports.RegisterServerOnPacketReceiveAny(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2713,11 +2713,11 @@ function ____exports.RegisterServerOnPacketReceiveAny(entry, hook, shots)
         nil,
         entry,
         5,
-        function(____, event, packet, player) return hook(nil, event, packet, player) end,
+        function(event, packet, player) return hook(nil, event, packet, player) end,
         shots
     )
 end
-function ____exports.RegisterPacketOnPacketReceiveOne(entry, hook, shots)
+function ____exports.RegisterPacketOnPacketReceiveOne(self, entry, hook, shots)
     if shots == nil then
         shots = 0
     end
@@ -2725,7 +2725,7 @@ function ____exports.RegisterPacketOnPacketReceiveOne(entry, hook, shots)
         nil,
         entry,
         5,
-        function(____, event, packet, player) return hook(nil, event, packet, player) end,
+        function(event, packet, player) return hook(nil, event, packet, player) end,
         shots
     )
 end
@@ -2733,432 +2733,393 @@ return ____exports
 end,
 ["HookHelpers.PlayerHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterPlayerOnLearnTalents(hook, shots)
+function ____exports.RegisterPlayerOnLearnTalents(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         39,
-        function(____, event, pPlayer, talentId, talentRank, spellid) return hook(nil, event, pPlayer, talentId, talentRank, spellid) end,
+        function(event, pPlayer, talentId, talentRank, spellid) return hook(nil, event, pPlayer, talentId, talentRank, spellid) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnLootItem(hook, shots)
+function ____exports.RegisterPlayerOnLootItem(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         32,
-        function(____, event, pPlayer, pItem, count, guid) return hook(nil, event, pPlayer, pItem, count, guid) end,
+        function(event, pPlayer, pItem, count, guid) return hook(nil, event, pPlayer, pItem, count, guid) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnLootMoney(hook, shots)
+function ____exports.RegisterPlayerOnLootMoney(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         37,
-        function(____, event, pPlayer, amount) return hook(nil, event, pPlayer, amount) end,
+        function(event, pPlayer, amount) return hook(nil, event, pPlayer, amount) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnFirstLogin(hook, shots)
+function ____exports.RegisterPlayerOnFirstLogin(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         30,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnRepop(hook, shots)
+function ____exports.RegisterPlayerOnRepop(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         35,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnResurrect(hook, shots)
+function ____exports.RegisterPlayerOnResurrect(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         36,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnQuestAbandon(hook, shots)
+function ____exports.RegisterPlayerOnQuestAbandon(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         38,
-        function(____, event, pPlayer, questId) return hook(nil, event, pPlayer, questId) end,
+        function(event, pPlayer, questId) return hook(nil, event, pPlayer, questId) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnEquip(hook, shots)
+function ____exports.RegisterPlayerOnEquip(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         29,
-        function(____, event, pPlayer, pItem, bag, slot) return hook(nil, event, pPlayer, pItem, bag, slot) end,
+        function(event, pPlayer, pItem, bag, slot) return hook(nil, event, pPlayer, pItem, bag, slot) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnCanUseItem(hook, shots)
+function ____exports.RegisterPlayerOnCanUseItem(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         31,
-        function(____, event, pPlayer, itemEntry) return hook(nil, event, pPlayer, itemEntry) end,
+        function(event, pPlayer, itemEntry) return hook(nil, event, pPlayer, itemEntry) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnPlayerEnterCombat(hook, shots)
+function ____exports.RegisterPlayerOnPlayerEnterCombat(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         33,
-        function(____, event, pPlayer, pEnemy) return hook(nil, event, pPlayer, pEnemy) end,
+        function(event, pPlayer, pEnemy) return hook(nil, event, pPlayer, pEnemy) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnPlayerLeaveCombat(hook, shots)
+function ____exports.RegisterPlayerOnPlayerLeaveCombat(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         34,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnPVPKill(hook, shots)
+function ____exports.RegisterPlayerOnPVPKill(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         6,
-        function(____, event, pKiller, pKilled) return hook(nil, event, pKiller, pKilled) end,
+        function(event, pKiller, pKilled) return hook(nil, event, pKiller, pKilled) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnCreatureKill(hook, shots)
+function ____exports.RegisterPlayerOnCreatureKill(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         7,
-        function(____, event, pKiller, pKilled) return hook(nil, event, pKiller, pKilled) end,
+        function(event, pKiller, pKilled) return hook(nil, event, pKiller, pKilled) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnPlayerKilledByCreature(hook, shots)
+function ____exports.RegisterPlayerOnPlayerKilledByCreature(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         8,
-        function(____, event, pKiller, pKilled) return hook(nil, event, pKiller, pKilled) end,
+        function(event, pKiller, pKilled) return hook(nil, event, pKiller, pKilled) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnLevelChanged(hook, shots)
+function ____exports.RegisterPlayerOnLevelChanged(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         13,
-        function(____, event, pPlayer, oldLevel) return hook(nil, event, pPlayer, oldLevel) end,
+        function(event, pPlayer, oldLevel) return hook(nil, event, pPlayer, oldLevel) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnFreeTalentPointsChanged(hook, shots)
+function ____exports.RegisterPlayerOnFreeTalentPointsChanged(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         16,
-        function(____, event, pPlayer, newPoints) return hook(nil, event, pPlayer, newPoints) end,
+        function(event, pPlayer, newPoints) return hook(nil, event, pPlayer, newPoints) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnTalentsReset(hook, shots)
+function ____exports.RegisterPlayerOnTalentsReset(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         17,
-        function(____, event, pPlayer, noCost) return hook(nil, event, pPlayer, noCost) end,
+        function(event, pPlayer, noCost) return hook(nil, event, pPlayer, noCost) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnMoneyChanged(hook, shots)
+function ____exports.RegisterPlayerOnMoneyChanged(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         14,
-        function(____, event, pPlayer, amount) return hook(nil, event, pPlayer, amount) end,
+        function(event, pPlayer, amount) return hook(nil, event, pPlayer, amount) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnGiveXP(hook, shots)
+function ____exports.RegisterPlayerOnGiveXP(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         12,
-        function(____, event, pPlayer, amount, pVictim) return hook(nil, event, pPlayer, amount, pVictim) end,
+        function(event, pPlayer, amount, pVictim) return hook(nil, event, pPlayer, amount, pVictim) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnReputationChange(hook, shots)
+function ____exports.RegisterPlayerOnReputationChange(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         15,
-        function(____, event, pPlayer, factionID, standing, incremental) return hook(nil, event, pPlayer, factionID, standing, incremental) end,
+        function(event, pPlayer, factionID, standing, incremental) return hook(nil, event, pPlayer, factionID, standing, incremental) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnDuelRequest(hook, shots)
+function ____exports.RegisterPlayerOnDuelRequest(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         9,
-        function(____, event, pTarget, pChallenger) return hook(nil, event, pTarget, pChallenger) end,
+        function(event, pTarget, pChallenger) return hook(nil, event, pTarget, pChallenger) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnDuelStart(hook, shots)
+function ____exports.RegisterPlayerOnDuelStart(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         10,
-        function(____, event, pStarter, pChallenger) return hook(nil, event, pStarter, pChallenger) end,
+        function(event, pStarter, pChallenger) return hook(nil, event, pStarter, pChallenger) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnDuelEnd(hook, shots)
+function ____exports.RegisterPlayerOnDuelEnd(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         11,
-        function(____, event, pWinner, pLoser, ____type) return hook(nil, event, pWinner, pLoser, ____type) end,
+        function(event, pWinner, pLoser, ____type) return hook(nil, event, pWinner, pLoser, ____type) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnEmote(hook, shots)
+function ____exports.RegisterPlayerOnEmote(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         23,
-        function(____, event, pPlayer, emote) return hook(nil, event, pPlayer, emote) end,
+        function(event, pPlayer, emote) return hook(nil, event, pPlayer, emote) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnTextEmote(hook, shots)
+function ____exports.RegisterPlayerOnTextEmote(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         24,
-        function(____, event, pPlayer, textEmote, emoteNum, guid) return hook(nil, event, pPlayer, textEmote, emoteNum, guid) end,
+        function(event, pPlayer, textEmote, emoteNum, guid) return hook(nil, event, pPlayer, textEmote, emoteNum, guid) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnSpellCast(hook, shots)
+function ____exports.RegisterPlayerOnSpellCast(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         5,
-        function(____, event, pPlayer, pSpell, skipCheck) return hook(nil, event, pPlayer, pSpell, skipCheck) end,
+        function(event, pPlayer, pSpell, skipCheck) return hook(nil, event, pPlayer, pSpell, skipCheck) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnLogin(hook, shots)
+function ____exports.RegisterPlayerOnLogin(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         3,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnLogout(hook, shots)
+function ____exports.RegisterPlayerOnLogout(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         4,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnCreate(hook, shots)
+function ____exports.RegisterPlayerOnCreate(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         1,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnDelete(hook, shots)
+function ____exports.RegisterPlayerOnDelete(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         2,
-        function(____, event, guidlow) return hook(nil, event, guidlow) end,
+        function(event, guidlow) return hook(nil, event, guidlow) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnSave(hook, shots)
+function ____exports.RegisterPlayerOnSave(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         25,
-        function(____, event, pPlayer) return hook(nil, event, pPlayer) end,
+        function(event, pPlayer) return hook(nil, event, pPlayer) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnBindToInstance(hook, shots)
+function ____exports.RegisterPlayerOnBindToInstance(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         26,
-        function(____, event, pPlayer, difficulty, mapid, permanent) return hook(nil, event, pPlayer, difficulty, mapid, permanent) end,
+        function(event, pPlayer, difficulty, mapid, permanent) return hook(nil, event, pPlayer, difficulty, mapid, permanent) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnUpdateZone(hook, shots)
+function ____exports.RegisterPlayerOnUpdateZone(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         27,
-        function(____, event, pPlayer, newZone, newArea) return hook(nil, event, pPlayer, newZone, newArea) end,
+        function(event, pPlayer, newZone, newArea) return hook(nil, event, pPlayer, newZone, newArea) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnMapChanged(hook, shots)
+function ____exports.RegisterPlayerOnMapChanged(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         28,
-        function(____, event, player) return hook(nil, event, player) end,
+        function(event, player) return hook(nil, event, player) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnChat(hook, shots)
+function ____exports.RegisterPlayerOnChat(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         18,
-        function(____, event, pPlayer, msg, ____type, lang) return hook(nil, event, pPlayer, msg, ____type, lang) end,
+        function(event, pPlayer, msg, ____type, lang) return hook(nil, event, pPlayer, msg, ____type, lang) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnChatGroup(hook, shots)
+function ____exports.RegisterPlayerOnChatGroup(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         20,
-        function(____, event, pPlayer, msg, ____type, lang, pGroup) return hook(nil, event, pPlayer, msg, ____type, lang, pGroup) end,
+        function(event, pPlayer, msg, ____type, lang, pGroup) return hook(nil, event, pPlayer, msg, ____type, lang, pGroup) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnChatGuild(hook, shots)
+function ____exports.RegisterPlayerOnChatGuild(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         21,
-        function(____, event, pPlayer, msg, ____type, lang, pGuild) return hook(nil, event, pPlayer, msg, ____type, lang, pGuild) end,
+        function(event, pPlayer, msg, ____type, lang, pGuild) return hook(nil, event, pPlayer, msg, ____type, lang, pGuild) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnChatChannel(hook, shots)
+function ____exports.RegisterPlayerOnChatChannel(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         22,
-        function(____, event, player, msg, ____type, lang, channel) return hook(nil, event, player, msg, ____type, lang, channel) end,
+        function(event, player, msg, ____type, lang, channel) return hook(nil, event, player, msg, ____type, lang, channel) end,
         shots
     )
 end
-function ____exports.RegisterPlayerOnChatWhisper(hook, shots)
+function ____exports.RegisterPlayerOnChatWhisper(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterPlayerEvent(
-        nil,
         19,
-        function(____, event, pPlayer, msg, ____type, lang, pReceiver) return hook(nil, event, pPlayer, msg, ____type, lang, pReceiver) end,
+        function(event, pPlayer, msg, ____type, lang, pReceiver) return hook(nil, event, pPlayer, msg, ____type, lang, pReceiver) end,
         shots
     )
 end
@@ -3166,14 +3127,14 @@ return ____exports
 end,
 ["HookHelpers.ServerHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterServerOnAddonMessage(hook, shots)
+function ____exports.RegisterServerOnAddonMessage(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterServerEvent(
         nil,
         30,
-        function(____, event, sender, ____type, prefix, msg, target) return hook(nil, event, sender, ____type, prefix, msg, target) end,
+        function(event, sender, ____type, prefix, msg, target) return hook(nil, event, sender, ____type, prefix, msg, target) end,
         shots
     )
 end
@@ -3184,7 +3145,7 @@ function ____exports.RegisterServerOnGameEventStart(self, hook, shots)
     RegisterServerEvent(
         nil,
         34,
-        function(____, event, eventid) return hook(nil, event, eventid) end,
+        function(event, eventid) return hook(nil, event, eventid) end,
         shots
     )
 end
@@ -3195,7 +3156,7 @@ function ____exports.RegisterServerOnGameEventStop(self, hook, shots)
     RegisterServerEvent(
         nil,
         35,
-        function(____, event, eventid) return hook(nil, event, eventid) end,
+        function(event, eventid) return hook(nil, event, eventid) end,
         shots
     )
 end
@@ -3206,7 +3167,7 @@ function ____exports.RegisterServerOnLuaStateClose(self, hook, shots)
     RegisterServerEvent(
         nil,
         16,
-        function(____, event) return hook(nil, event) end,
+        function(event) return hook(nil, event) end,
         shots
     )
 end
@@ -3217,7 +3178,7 @@ function ____exports.RegisterServerOnLuaStateOpen(self, hook, shots)
     RegisterServerEvent(
         nil,
         33,
-        function(____, event) return hook(nil, event) end,
+        function(event) return hook(nil, event) end,
         shots
     )
 end
@@ -3228,7 +3189,7 @@ function ____exports.RegisterServerOnAreaTrigger(self, hook, shots)
     RegisterServerEvent(
         nil,
         24,
-        function(____, event, pPlayer, pTrigger) return hook(nil, event, pPlayer, pTrigger) end,
+        function(event, pPlayer, pTrigger) return hook(nil, event, pPlayer, pTrigger) end,
         shots
     )
 end
@@ -3239,18 +3200,18 @@ function ____exports.RegisterServerOnWheatherChange(self, hook, shots)
     RegisterServerEvent(
         nil,
         25,
-        function(____, event, zone, state, grade) return hook(nil, event, zone, state, grade) end,
+        function(event, zone, state, grade) return hook(nil, event, zone, state, grade) end,
         shots
     )
 end
-function ____exports.RegisterServerOnAuctionAdd(hook, shots)
+function ____exports.RegisterServerOnAuctionAdd(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterServerEvent(
         nil,
         26,
-        function(____, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
+        function(event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
         shots
     )
 end
@@ -3261,7 +3222,7 @@ function ____exports.RegisterServerOnAuctionRemove(self, hook, shots)
     RegisterServerEvent(
         nil,
         27,
-        function(____, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
+        function(event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
         shots
     )
 end
@@ -3272,7 +3233,7 @@ function ____exports.RegisterServerOnAuctionSuccessful(self, hook, shots)
     RegisterServerEvent(
         nil,
         28,
-        function(____, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
+        function(event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
         shots
     )
 end
@@ -3283,7 +3244,7 @@ function ____exports.RegisterServerOnAuctionExpire(self, hook, shots)
     RegisterServerEvent(
         nil,
         29,
-        function(____, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
+        function(event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) return hook(nil, event, auctionId, owner, item, expireTime, buyout, startBid, currentBid, bidderGUIDLow) end,
         shots
     )
 end
@@ -3294,7 +3255,7 @@ function ____exports.RegisterServerOnOpenStateChange(self, hook, shots)
     RegisterServerEvent(
         nil,
         8,
-        function(____, event, open) return hook(nil, event, open) end,
+        function(event, open) return hook(nil, event, open) end,
         shots
     )
 end
@@ -3305,7 +3266,7 @@ function ____exports.RegisterServerOnShutdownInitiate(self, hook, shots)
     RegisterServerEvent(
         nil,
         11,
-        function(____, event, code, mask) return hook(nil, event, code, mask) end,
+        function(event, code, mask) return hook(nil, event, code, mask) end,
         shots
     )
 end
@@ -3316,7 +3277,7 @@ function ____exports.RegisterServerOnShutdownCancel(self, hook, shots)
     RegisterServerEvent(
         nil,
         12,
-        function(____, event) return hook(nil, event) end,
+        function(event) return hook(nil, event) end,
         shots
     )
 end
@@ -3327,7 +3288,7 @@ function ____exports.RegisterServerOnStartup(self, hook, shots)
     RegisterServerEvent(
         nil,
         14,
-        function(____, event) return hook(nil, event) end,
+        function(event) return hook(nil, event) end,
         shots
     )
 end
@@ -3338,7 +3299,7 @@ function ____exports.RegisterServerOnShutdown(self, hook, shots)
     RegisterServerEvent(
         nil,
         15,
-        function(____, event) return hook(nil, event) end,
+        function(event) return hook(nil, event) end,
         shots
     )
 end
@@ -3349,7 +3310,7 @@ function ____exports.RegisterServerOnMapCreate(self, hook, shots)
     RegisterServerEvent(
         nil,
         17,
-        function(____, event, map) return hook(nil, event, map) end,
+        function(event, map) return hook(nil, event, map) end,
         shots
     )
 end
@@ -3360,7 +3321,7 @@ function ____exports.RegisterServerOnMapDestroy(self, hook, shots)
     RegisterServerEvent(
         nil,
         18,
-        function(____, event, map) return hook(nil, event, map) end,
+        function(event, map) return hook(nil, event, map) end,
         shots
     )
 end
@@ -3371,7 +3332,7 @@ function ____exports.RegisterServerOnMapPlayerEnter(self, hook, shots)
     RegisterServerEvent(
         nil,
         21,
-        function(____, event, map, player) return hook(nil, event, map, player) end,
+        function(event, map, player) return hook(nil, event, map, player) end,
         shots
     )
 end
@@ -3382,7 +3343,7 @@ function ____exports.RegisterServerOnMapPlayerLeave(self, hook, shots)
     RegisterServerEvent(
         nil,
         22,
-        function(____, event, map, player) return hook(nil, event, map, player) end,
+        function(event, map, player) return hook(nil, event, map, player) end,
         shots
     )
 end
@@ -3393,7 +3354,7 @@ function ____exports.RegisterServerOnMapUpdate(self, hook, shots)
     RegisterServerEvent(
         nil,
         23,
-        function(____, event, map, diff) return hook(nil, event, map, diff) end,
+        function(event, map, diff) return hook(nil, event, map, diff) end,
         shots
     )
 end
@@ -3404,7 +3365,7 @@ function ____exports.RegisterServerOnDeleteGameObject(self, hook, shots)
     RegisterServerEvent(
         nil,
         32,
-        function(____, event, gameobject) return hook(nil, event, gameobject) end,
+        function(event, gameobject) return hook(nil, event, gameobject) end,
         shots
     )
 end
@@ -3415,7 +3376,7 @@ function ____exports.RegisterServerOnDeleteCreature(self, hook, shots)
     RegisterServerEvent(
         nil,
         31,
-        function(____, event, creature) return hook(nil, event, creature) end,
+        function(event, creature) return hook(nil, event, creature) end,
         shots
     )
 end
@@ -3507,113 +3468,113 @@ return ____exports
 end,
 ["HookHelpers.GuildHooks"] = function() require("lualib_bundle");
 local ____exports = {}
-function ____exports.RegisterGuildOnAddMember(hook, shots)
+function ____exports.RegisterGuildOnAddMember(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         1,
-        function(____, event, guild, player, plRank) return hook(nil, event, guild, player, plRank) end,
+        function(event, guild, player, plRank) return hook(nil, event, guild, player, plRank) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnRemoveMember(hook, shots)
+function ____exports.RegisterGuildOnRemoveMember(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         2,
-        function(____, event, guild, player, isDisbanding) return hook(nil, event, guild, player, isDisbanding) end,
+        function(event, guild, player, isDisbanding) return hook(nil, event, guild, player, isDisbanding) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnMOTDChanged(hook, shots)
+function ____exports.RegisterGuildOnMOTDChanged(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         3,
-        function(____, event, guild, newMotd) return hook(nil, event, guild, newMotd) end,
+        function(event, guild, newMotd) return hook(nil, event, guild, newMotd) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnInfoChanged(hook, shots)
+function ____exports.RegisterGuildOnInfoChanged(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         4,
-        function(____, event, guild, newInfo) return hook(nil, event, guild, newInfo) end,
+        function(event, guild, newInfo) return hook(nil, event, guild, newInfo) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnCreate(hook, shots)
+function ____exports.RegisterGuildOnCreate(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         5,
-        function(____, event, guild, leader, name) return hook(nil, event, guild, leader, name) end,
+        function(event, guild, leader, name) return hook(nil, event, guild, leader, name) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnDisband(hook, shots)
+function ____exports.RegisterGuildOnDisband(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         6,
-        function(____, event, guild) return hook(nil, event, guild) end,
+        function(event, guild) return hook(nil, event, guild) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnMemberWitdrawMoney(hook, shots)
+function ____exports.RegisterGuildOnMemberWitdrawMoney(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         7,
-        function(____, event, guild, player, amount, isRepair) return hook(nil, event, guild, player, amount, isRepair) end,
+        function(event, guild, player, amount, isRepair) return hook(nil, event, guild, player, amount, isRepair) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnMemberDepositMoney(hook, shots)
+function ____exports.RegisterGuildOnMemberDepositMoney(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         8,
-        function(____, event, guild, player, amount) return hook(nil, event, guild, player, amount) end,
+        function(event, guild, player, amount) return hook(nil, event, guild, player, amount) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnEvent(hook, shots)
+function ____exports.RegisterGuildOnEvent(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         10,
-        function(____, event, guild, eventType, playerGuid1, playerGuid2, newRank) return hook(nil, event, guild, eventType, playerGuid1, playerGuid2, newRank) end,
+        function(event, guild, eventType, playerGuid1, playerGuid2, newRank) return hook(nil, event, guild, eventType, playerGuid1, playerGuid2, newRank) end,
         shots
     )
 end
-function ____exports.RegisterGuildOnBankEvent(hook, shots)
+function ____exports.RegisterGuildOnBankEvent(self, hook, shots)
     if shots == nil then
         shots = 0
     end
     RegisterGuildEvent(
         nil,
         11,
-        function(____, event, guild, eventType, tabId, playerGuid, itemOrMoney, itemStackCount, destTabId) return hook(nil, event, guild, eventType, tabId, playerGuid, itemOrMoney, itemStackCount, destTabId) end,
+        function(event, guild, eventType, tabId, playerGuid, itemOrMoney, itemStackCount, destTabId) return hook(nil, event, guild, eventType, tabId, playerGuid, itemOrMoney, itemStackCount, destTabId) end,
         shots
     )
 end

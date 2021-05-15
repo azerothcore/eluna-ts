@@ -1,9 +1,5 @@
-/**
- * @noSelf
- */
 export function RegisterItemOnDummyEffect(
   entry: number,
-  /** @noSelf **/
   hook: item_event_on_dummy_effect,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -22,12 +18,8 @@ export function RegisterItemOnDummyEffect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterItemOnQuestAccept(
   entry: number,
-  /** @noSelf **/
   hook: item_event_on_quest_accept,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -45,12 +37,8 @@ export function RegisterItemOnQuestAccept(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterItemOnItemUse(
   entry: number,
-  /** @noSelf **/
   hook: item_event_on_use,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -68,12 +56,8 @@ export function RegisterItemOnItemUse(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterItemOnExpire(
   entry: number,
-  /** @noSelf **/
   hook: item_event_on_expire,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -87,12 +71,8 @@ export function RegisterItemOnExpire(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterItemOnRemove(
   entry: number,
-  /** @noSelf **/
   hook: item_event_on_remove,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

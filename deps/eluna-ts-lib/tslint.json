@@ -8,7 +8,8 @@
         "max-classes-per-file": false,
         "jsdoc-format": false,
         "variable-name": false,
-        "no-bitwise": false
+        "no-bitwise": false,
+        "only-arrow-functions" : false
     },
     "rulesDirectory": []
 }

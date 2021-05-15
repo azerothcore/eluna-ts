@@ -1,8 +1,4 @@
-/**
- * @noSelf
- */
 export function RegisterPlayerOnLearnTalents(
-  /** @noSelf **/
   hook: player_event_on_learn_talents,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -20,11 +16,7 @@ export function RegisterPlayerOnLearnTalents(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnLootItem(
-  /** @noSelf **/
   hook: player_event_on_loot_item,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -42,11 +34,7 @@ export function RegisterPlayerOnLootItem(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnLootMoney(
-  /** @noSelf **/
   hook: player_event_on_loot_money,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -62,11 +50,7 @@ export function RegisterPlayerOnLootMoney(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnFirstLogin(
-  /** @noSelf **/
   hook: player_event_on_first_login,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -79,11 +63,7 @@ export function RegisterPlayerOnFirstLogin(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnRepop(
-  /** @noSelf **/
   hook: player_event_on_repop,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -96,11 +76,7 @@ export function RegisterPlayerOnRepop(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnResurrect(
-  /** @noSelf **/
   hook: player_event_on_resurrect,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -113,11 +89,7 @@ export function RegisterPlayerOnResurrect(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnQuestAbandon(
-  /** @noSelf **/
   hook: player_event_on_quest_abandon,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -133,11 +105,7 @@ export function RegisterPlayerOnQuestAbandon(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnEquip(
-  /** @noSelf **/
   hook: player_event_on_equip,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -155,11 +123,7 @@ export function RegisterPlayerOnEquip(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnCanUseItem(
-  /** @noSelf **/
   hook: player_event_on_can_use_item,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -175,11 +139,7 @@ export function RegisterPlayerOnCanUseItem(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnPlayerEnterCombat(
-  /** @noSelf **/
   hook: player_event_on_enter_combat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -195,11 +155,7 @@ export function RegisterPlayerOnPlayerEnterCombat(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnPlayerLeaveCombat(
-  /** @noSelf **/
   hook: player_event_on_leave_combat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -212,11 +168,7 @@ export function RegisterPlayerOnPlayerLeaveCombat(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnPVPKill(
-  /** @noSelf **/
   hook: player_event_on_kill_player,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -232,11 +184,7 @@ export function RegisterPlayerOnPVPKill(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnCreatureKill(
-  /** @noSelf **/
   hook: player_event_on_kill_creature,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -252,11 +200,7 @@ export function RegisterPlayerOnCreatureKill(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnPlayerKilledByCreature(
-  /** @noSelf **/
   hook: player_event_on_killed_by_creature,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -272,11 +216,7 @@ export function RegisterPlayerOnPlayerKilledByCreature(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnLevelChanged(
-  /** @noSelf **/
   hook: player_event_on_level_change,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -292,11 +232,7 @@ export function RegisterPlayerOnLevelChanged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnFreeTalentPointsChanged(
-  /** @noSelf **/
   hook: player_event_on_talents_change,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -312,11 +248,7 @@ export function RegisterPlayerOnFreeTalentPointsChanged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnTalentsReset(
-  /** @noSelf **/
   hook: player_event_on_talents_reset,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -332,11 +264,7 @@ export function RegisterPlayerOnTalentsReset(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnMoneyChanged(
-  /** @noSelf **/
   hook: player_event_on_money_change,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -352,11 +280,7 @@ export function RegisterPlayerOnMoneyChanged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnGiveXP(
-  /** @noSelf **/
   hook: player_event_on_give_xp,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -373,11 +297,7 @@ export function RegisterPlayerOnGiveXP(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnReputationChange(
-  /** @noSelf **/
   hook: player_event_on_reputation_change,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -395,11 +315,7 @@ export function RegisterPlayerOnReputationChange(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnDuelRequest(
-  /** @noSelf **/
   hook: player_event_on_duel_request,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -415,11 +331,7 @@ export function RegisterPlayerOnDuelRequest(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnDuelStart(
-  /** @noSelf **/
   hook: player_event_on_duel_start,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -435,11 +347,7 @@ export function RegisterPlayerOnDuelStart(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnDuelEnd(
-  /** @noSelf **/
   hook: player_event_on_duel_end,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -456,11 +364,7 @@ export function RegisterPlayerOnDuelEnd(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnEmote(
-  /** @noSelf **/
   hook: player_event_on_emote,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -476,11 +380,7 @@ export function RegisterPlayerOnEmote(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnTextEmote(
-  /** @noSelf **/
   hook: player_event_on_text_emote,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -498,11 +398,7 @@ export function RegisterPlayerOnTextEmote(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnSpellCast(
-  /** @noSelf **/
   hook: player_event_on_spell_cast,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -519,11 +415,7 @@ export function RegisterPlayerOnSpellCast(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnLogin(
-  /** @noSelf **/
   hook: player_event_on_login,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -536,11 +428,7 @@ export function RegisterPlayerOnLogin(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnLogout(
-  /** @noSelf **/
   hook: player_event_on_logout,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -553,11 +441,7 @@ export function RegisterPlayerOnLogout(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnCreate(
-  /** @noSelf **/
   hook: player_event_on_character_create,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -570,11 +454,7 @@ export function RegisterPlayerOnCreate(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnDelete(
-  /** @noSelf **/
   hook: player_event_on_character_delete,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -587,11 +467,7 @@ export function RegisterPlayerOnDelete(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnSave(
-  /** @noSelf **/
   hook: player_event_on_save,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -604,11 +480,7 @@ export function RegisterPlayerOnSave(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnBindToInstance(
-  /** @noSelf **/
   hook: player_event_on_bind_to_instance,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -626,11 +498,7 @@ export function RegisterPlayerOnBindToInstance(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnUpdateZone(
-  /** @noSelf **/
   hook: player_event_on_update_zone,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -647,11 +515,7 @@ export function RegisterPlayerOnUpdateZone(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnMapChanged(
-  /** @noSelf **/
   hook: player_event_on_map_change,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -664,11 +528,7 @@ export function RegisterPlayerOnMapChanged(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnChat(
-  /** @noSelf **/
   hook: player_event_on_chat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -686,11 +546,7 @@ export function RegisterPlayerOnChat(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnChatGroup(
-  /** @noSelf **/
   hook: player_event_on_group_chat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -709,11 +565,7 @@ export function RegisterPlayerOnChatGroup(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnChatGuild(
-  /** @noSelf **/
   hook: player_event_on_guild_chat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -732,11 +584,7 @@ export function RegisterPlayerOnChatGuild(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnChatChannel(
-  /** @noSelf **/
   hook: player_event_on_channel_chat,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,
@@ -755,11 +603,7 @@ export function RegisterPlayerOnChatChannel(
   );
 }
 
-/**
- * @noSelf
- */
 export function RegisterPlayerOnChatWhisper(
-  /** @noSelf **/
   hook: player_event_on_whisper,
   /** the number of times the function will be called, 0 means "always call this function" */
   shots = 0,

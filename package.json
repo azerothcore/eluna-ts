@@ -1,20 +1,14 @@
 {
   "name": "@azerothcore/eluna-ts",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=14.0.0",
-    "npm": ">=7.0.0"
-  },
   "description": "Typescript transpiler for Eluna",
   "scripts": {
     "build": "node run build",
     "build:lib": "node run build:lib",
-    "dev": "node run build --watch"
+    "dev": "node run build --watch",
+    "doc:gen": "npx typedoc  --options typedoc.json",
+    "doc:serve": "npx http-server docs"
   },
-  "workspaces": [
-    "deps/eluna-ts-definitions",
-    "deps/eluna-ts-lib"
-  ],
   "main": "src/index.ts",
   "author": "AzerothCore",
   "contributors": [
