@@ -1,6 +1,6 @@
 {
   "name": "@azerothcore/eluna-ts-definitions",
-  "version": "1.2.10",
+  "version": "1.2.11",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
