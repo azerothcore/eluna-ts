@@ -19,11 +19,5 @@
   },
   "include": [
     "src/**/*.ts"
-  ],
-  "tstl": {
-    "luaTarget": "5.2",
-    "noHeader": true,
-    "luaLibImport": "none",
-    "luaBundleEntry": "./src/index.ts"
-  }
+  ]
 }
