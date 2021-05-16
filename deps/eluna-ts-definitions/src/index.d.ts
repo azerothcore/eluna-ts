@@ -11,7 +11,7 @@ import "./hooks/GameObjectHooks";
 import "./hooks/GossipHooks";
 import "./hooks/GroupHooks";
 import "./hooks/GuildHooks";
-import "./hooks/InstanceHooks";
+import "./hooks/MapHooks";
 import "./hooks/ItemHooks";
 import "./hooks/PacketHooks";
 import "./hooks/PlayerHooks";

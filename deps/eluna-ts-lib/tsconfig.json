@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "esModuleInterop": true,
     "target": "esnext",
     "declaration": true,
     "declarationDir": "./src/declarations",
@@ -9,17 +10,28 @@
     ],
     "moduleResolution": "node",
     "types": [
+      "jest",
       "lua-types/5.2",
       "../eluna-ts-definitions"
     ],
     "typeRoots": [
       "./node_modules/@types",
-      "../eluna-ts-definitions"
+      "../eluna-ts-definitions",
+      "../../node_modules/@types"
     ],
     "rootDir": "src"
   },
   "include": [
     "src/**/*.ts"
+  ],
+  "exclude": [
+    "src/declarations",
+    "node_modules",
+    "**/node_modules",
+    "test",
+    "**/*spec.ts",
+    "**/__tests__",
+    "**/__mocks__",
   ],
   "references": [
     {

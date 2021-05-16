@@ -1,4 +1,4 @@
-name: docker-build
+name: docker-n-doc-build
 on:
   push:
     branches:
@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  docker-build-n-deploy:
+  build-n-deploy:
     strategy:
       fail-fast: true
     runs-on: ubuntu-20.04

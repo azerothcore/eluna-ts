@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "declaration": true,
+    "rootDir": "."
+  },
+  "include": [
+    "modules/**/src/**/*.ts",
+    "deps/**/src/**/*.ts"
+  ],
+}

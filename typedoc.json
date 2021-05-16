@@ -1,7 +1,17 @@
 {
-  "excludeExternals": true,
+  "tsconfig" : "tsconfig.doc.json",
   "entryPoints": [
-    "./deps"
+    "./deps/eluna-ts-lib/src/index.ts",
+    "./deps/eluna-ts-definitions/src"
   ],
-  "out": "docs/typedoc"
+  "exclude": "**/*+(.spec|.e2e).ts",
+  "out": "docs/typedoc",
+  "disableOutputCheck": true,
+  "theme": "pages-plugin",
+  "listInvalidSymbolLinks": true,
+  "pages": {
+    "enableSearch": true,
+    "enablePageLinks": true,
+    "groups": []
+  }
 }

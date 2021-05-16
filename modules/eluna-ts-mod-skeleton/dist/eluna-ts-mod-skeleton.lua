@@ -31,7 +31,7 @@ local PlayerChat = ____exports.PlayerChat
 PlayerChat.name = "PlayerChat"
 function PlayerChat.prototype.____constructor(self, firstMessage)
     self.OnPlayerChat = function(____, event, player, msg)
-        player:SendChatMessageToPlayer(7, 0, ((("Before you said " .. self.previousMessage) .. ", and now you said: ") .. msg) .. "!", player)
+        player:SendChatMessageToPlayer(7, 0, ((("Previous message: " .. self.previousMessage) .. ", current message: ") .. msg) .. "!", player)
         self.previousMessage = msg
         return true
     end
@@ -39,6 +39,10 @@ function PlayerChat.prototype.____constructor(self, firstMessage)
 end
 local playerChat = __TS__New(____exports.PlayerChat, "First Message")
 RegisterPlayerOnChat(nil, playerChat.OnPlayerChat)
+RegisterPlayerEvent(
+    18,
+    function(...) return playerChat:OnPlayerChat(...) end
+)
 return ____exports
 end,
 ["index"] = function() local ____exports = {}

@@ -23,8 +23,7 @@ If you don't have docker or you already have Nodejs install, you can just follow
 
 - Install [nodejs 12+](https://nodejs.org/en/)
 
-- Install **NPM v7** : run `npm install -g npm@7` once installed nodejs (on linux you may need `sudo` to run this command). **NOTE:** NPM v7 is already included in nodejs 15+
-
+**NOTE**: You can run the `bash install-node.sh` command to do it with an automatic script (it works on almost every OS with bash)
 ### 2. Install dependencies
 
 - Run `npm install` to install the required node dependencies
@@ -38,10 +37,14 @@ If you don't have docker or you already have Nodejs install, you can just follow
 
 ### 2. Build and run the container
 
-- Run `docker-compose up --build eluna-ts-dev` 
+- Run `docker-compose up --build eluna-ts-dev`
 ## Configure your environment
 
 
 ##
+
+## Unit tests
+
+[Unit tests coverage report](./coverage/lcov-report/index.html)
 
 

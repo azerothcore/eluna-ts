@@ -2,8 +2,9 @@
   "compilerOptions": {
     "strict": true,
     "target": "esnext",
+    "skipLibCheck": true,
     "lib": [
-      "esnext"
+      "esnext","DOM"
     ],
     "moduleResolution": "node",
     "types": [

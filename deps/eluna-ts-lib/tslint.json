@@ -1,15 +1,24 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended"
-    ],
-    "jsRules": {},
-    "rules": {
-        "max-classes-per-file": false,
-        "jsdoc-format": false,
-        "variable-name": false,
-        "no-bitwise": false,
-        "only-arrow-functions" : false
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "max-classes-per-file": false,
+    "jsdoc-format": false,
+    "variable-name": false,
+    "no-bitwise": false,
+    "only-arrow-functions": false,
+    "strict-comparisons": true
+  },
+  "linterOptions": {
+    "exclude": [
+      "src/declarations/**",
+      "**/*spec.ts",
+      "**/__tests__",
+      "**/__mocks__"
+    ]
+  },
+  "rulesDirectory": []
 }

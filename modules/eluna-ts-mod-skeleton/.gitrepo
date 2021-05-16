@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/azerothcore/eluna-ts-mod-skeleton.git
 	branch = master
-	commit = 16090963e6ab6ad12a15c9a6e61190356610094f
+	commit = 6f5f8521013e57fee3e3ca0d1bde1d7d0b05c429
 	method = merge
 	cmdver = 0.4.3
-	parent = 4107922c30e52ca37e10ef9e5aae08dcb4b92b64
+	parent = 54ef9c2339af4fa3f85099451d848e2d47dbb01c

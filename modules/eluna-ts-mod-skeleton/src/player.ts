@@ -1,8 +1,3 @@
-import {
-  RegisterPlayerOnChat,
-  RegisterPlayerOnLogin,
-} from "@azerothcore/eluna-ts-lib";
-
 /**
  * Example with arrow function
  *
@@ -17,7 +12,7 @@ export const OnPlayerLogin: player_event_on_login = (event, player) => {
   );
 };
 
-RegisterPlayerOnLogin(OnPlayerLogin);
+RegisterPlayerEvent(PlayerEvents.PLAYER_EVENT_ON_LOGIN, (...args)=> OnPlayerLogin(...args));
 
 /**
  *
@@ -40,14 +35,14 @@ export class PlayerChat {
   }
 
   OnPlayerChat: player_event_on_chat = (
-    event,
-    player,
-    msg,
+    event:number,
+    player: Player,
+    msg: string,
   ): string | boolean => {
     player.SendChatMessageToPlayer(
       ChatMsg.CHAT_MSG_WHISPER,
       Language.LANG_UNIVERSAL,
-      `Before you said ${this.previousMessage}, and now you said: ${msg}!`,
+      `Previous message: ${this.previousMessage}, current message: ${msg}!`,
       player,
     );
 
@@ -59,4 +54,5 @@ export class PlayerChat {
 
 const playerChat = new PlayerChat("First Message");
 
-RegisterPlayerOnChat(playerChat.OnPlayerChat);
+RegisterPlayerEvent(PlayerEvents.PLAYER_EVENT_ON_CHAT, (...args) => playerChat.OnPlayerChat(...args))
+
