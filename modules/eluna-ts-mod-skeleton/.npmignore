@@ -1,0 +1,8 @@
+.vscode
+/docs
+__tests__
+jest.config.ts
+tslint.json
+.gitrepo
+.editorconfig
+.github

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "target": "esnext",
+    "esModuleInterop": true,
     "lib": [
       "esnext"
     ],
@@ -19,5 +20,20 @@
   },
   "include": [
     "src/**/*.ts"
-  ]
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "test",
+    "**/*spec.ts",
+    "**/__tests__",
+    "**/__mocks__",
+  ],
+  "tstl": {
+    "luaTarget": "5.2",
+    "noHeader": true,
+    "luaLibImport": "none",
+    "luaBundle" : "dist/eluna-ts-mod-skeleton.lua",
+    "luaBundleEntry": "./src/index.ts"
+  }
 }

@@ -1,1 +1,1 @@
-import "./Player"
+import "./player"

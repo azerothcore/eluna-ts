@@ -5,9 +5,10 @@ import {
 
 /**
  * Example with arrow function
+ *
+ * This is just an Hello World
  */
-
-const OnPlayerLogin: player_event_on_login = (event, player) => {
+export const OnPlayerLogin: player_event_on_login = (event, player) => {
   player.SendChatMessageToPlayer(
     ChatMsg.CHAT_MSG_WHISPER,
     Language.LANG_UNIVERSAL,
@@ -20,17 +21,23 @@ RegisterPlayerOnLogin(OnPlayerLogin);
 
 /**
  *
- * Example with class
+ * This is an example of how to use TypeScript classes
+ * and implement hook methods inside it.
+ *
+ * A class can be useful to implement more complex
+ * scripts that can be instantiated or extended
  *
  */
-
-class PlayerChat {
+export class PlayerChat {
   previousMessage: string;
 
-  constructor(prevMessage: string) {
-    this.previousMessage = prevMessage;
+  /**
+   *
+   * @param firstMessage The first message to display
+   */
+  constructor(firstMessage: string) {
+    this.previousMessage = firstMessage;
   }
-
 
   OnPlayerChat: player_event_on_chat = (
     event,

@@ -3,5 +3,24 @@
   "entryPoints": [
     "./src"
   ],
-  "out": "docs"
+  "exclude": "**/*+(index|.spec|.e2e).ts",
+  "out": "docs/typedoc",
+  "disableOutputCheck": true,
+  "theme": "pages-plugin",
+  "listInvalidSymbolLinks" : true,
+  "pages": {
+    "enableSearch": true,
+    "enablePageLinks": true,
+    "groups": [
+      {
+        "title": "Documentation",
+        "pages": [
+          {
+            "title": "Sample Page",
+            "source": "docs/sample-page.md"
+          }
+        ]
+      }
+    ]
+  }
 }
