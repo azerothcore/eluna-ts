@@ -6,7 +6,7 @@
     "declaration": true,
     "declarationDir": "./src/declarations",
     "lib": [
-      "esnext"
+      "esnext","DOM"
     ],
     "moduleResolution": "node",
     "types": [
