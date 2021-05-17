@@ -3,8 +3,8 @@ const path = require("path");
 const command = require("commander");
 const { execSync } = require("child_process")
 
-const ELUNATS_LUA_ROOT_DIR = process.env.ELUNATS_LUA_ROOT_DIR ?? "./dist";
-const ELUNATS_BUILD_FILE = process.env.ELUNATS_BUILD_FILE ?? "eluna-ts.lua"
+const ELUNATS_LUA_ROOT_DIR = process.env.ELUNATS_LUA_ROOT_DIR ? process.env.ELUNATS_LUA_ROOT_DIR : "./dist";
+const ELUNATS_BUILD_FILE = process.env.ELUNATS_BUILD_FILE ? process.env.ELUNATS_BUILD_FILE : "eluna-ts.lua"
 
 const program = (new command.Command()).name("node run");
 
