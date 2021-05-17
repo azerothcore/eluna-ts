@@ -1,0 +1,1187 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EObject | @azerothcore/eluna-ts</title>
+	<meta name="description" content="Documentation for @azerothcore/eluna-ts">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@azerothcore/eluna-ts</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/eluna_ts_definitions_src_global.html">eluna-ts-definitions/src/global</a>
+				</li>
+				<li>
+					<a href="eluna_ts_definitions_src_global.eobject.html">EObject</a>
+				</li>
+			</ul>
+			<h1>Class EObject</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A basic game object (either an Item or a WorldObject).</p>
+					</div>
+					<p>Objects in MaNGOS/Trinity are stored an a giant block of &quot;values&quot;. Subclasses of Object, like WorldObject, extend the block with more data specific to that subclass. Further subclasses, like Player, extend it even further.</p>
+					<p>A detailed map of all the fields in this data block can be found in the UpdateFields.h file of your emulator (it varies depending on the expansion supported).</p>
+					<p>The GetValue methods in this class (e.g. Object:GetInt32Value) provide low-level access to the data block. Other methods, like Object:HasFlag and Object:GetScale, merely wrap the GetValue methods and provide a simpler interface.</p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">EObject</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="eluna_ts_definitions_src_global.item.html" class="tsd-signature-type">Item</a>
+							</li>
+							<li>
+								<a href="eluna_ts_definitions_src_global.worldobject.html" class="tsd-signature-type">WorldObject</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getbytevalue" class="tsd-kind-icon">Get<wbr>Byte<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getentry" class="tsd-kind-icon">Get<wbr>Entry</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getfloatvalue" class="tsd-kind-icon">Get<wbr>Float<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getguid" class="tsd-kind-icon">GetGUID</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getguidlow" class="tsd-kind-icon">GetGUIDLow</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getint32value" class="tsd-kind-icon">Get<wbr>Int32<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getscale" class="tsd-kind-icon">Get<wbr>Scale</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#gettypeid" class="tsd-kind-icon">Get<wbr>Type<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getuint16value" class="tsd-kind-icon">GetUInt16<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getuint32value" class="tsd-kind-icon">GetUInt32<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#getuint64value" class="tsd-kind-icon">GetUInt64<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#hasflag" class="tsd-kind-icon">Has<wbr>Flag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#isinworld" class="tsd-kind-icon">Is<wbr>InWorld</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#removeflag" class="tsd-kind-icon">Remove<wbr>Flag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setbytevalue" class="tsd-kind-icon">Set<wbr>Byte<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setflag" class="tsd-kind-icon">Set<wbr>Flag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setfloatvalue" class="tsd-kind-icon">Set<wbr>Float<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setint16value" class="tsd-kind-icon">Set<wbr>Int16<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setint32value" class="tsd-kind-icon">Set<wbr>Int32<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setscale" class="tsd-kind-icon">Set<wbr>Scale</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setuint16value" class="tsd-kind-icon">SetUInt16<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setuint32value" class="tsd-kind-icon">SetUInt32<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#setuint64value" class="tsd-kind-icon">SetUInt64<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#tocorpse" class="tsd-kind-icon">To<wbr>Corpse</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#tocreature" class="tsd-kind-icon">To<wbr>Creature</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#togameobject" class="tsd-kind-icon">To<wbr>Game<wbr>Object</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#toplayer" class="tsd-kind-icon">To<wbr>Player</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#tounit" class="tsd-kind-icon">To<wbr>Unit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="eluna_ts_definitions_src_global.eobject.html#updateuint32value" class="tsd-kind-icon">UpdateUInt32<wbr>Value</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new EObject<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eluna_ts_definitions_src_global.eobject.html" class="tsd-signature-type">EObject</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="eluna_ts_definitions_src_global.eobject.html" class="tsd-signature-type">EObject</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getbytevalue" class="tsd-anchor"></a>
+					<h3>Get<wbr>Byte<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>Byte<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2723">eluna-ts-definitions/src/global.d.ts:2723</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the data at the specified index and offset, casted to an unsigned 8-bit integer.
+									E.g. if you want the second byte at index 10, you would pass in 1 as the offset.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getentry" class="tsd-anchor"></a>
+					<h3>Get<wbr>Entry</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>Entry<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2729">eluna-ts-definitions/src/global.d.ts:2729</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the entry of the [Object].
+									[Player]s do not have an &quot;entry&quot;.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getfloatvalue" class="tsd-anchor"></a>
+					<h3>Get<wbr>Float<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>Float<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2734">eluna-ts-definitions/src/global.d.ts:2734</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the data at the specified index, casted to a single-precision floating point value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getguid" class="tsd-anchor"></a>
+					<h3>GetGUID</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">GetGUID<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2743">eluna-ts-definitions/src/global.d.ts:2743</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the GUID of the [Object].
+										GUID is an unique identifier for the object.
+										However on MaNGOS and cMangos creatures and gameobjects inside different maps can share
+										the same GUID but not on the same map.
+									On TrinityCore this value is unique across all maps</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getguidlow" class="tsd-anchor"></a>
+					<h3>GetGUIDLow</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">GetGUIDLow<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2753">eluna-ts-definitions/src/global.d.ts:2753</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the low-part of the [Object]&#39;s GUID.
+										On TrinityCore all low GUIDs are different for all objects of the same type.
+										For example creatures in instances are assigned new GUIDs when the Map is created.
+										On MaNGOS and cMaNGOS low GUIDs are unique only on the same map.
+										For example creatures in instances use the same low GUID assigned for that spawn in the database.
+									This is why to identify a creature you have to know the instanceId and low GUID. See [Map:GetIntstanceId]</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getint32value" class="tsd-anchor"></a>
+					<h3>Get<wbr>Int32<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>Int32<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2758">eluna-ts-definitions/src/global.d.ts:2758</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the data at the specified index, casted to a signed 32-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getscale" class="tsd-anchor"></a>
+					<h3>Get<wbr>Scale</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>Scale<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2764">eluna-ts-definitions/src/global.d.ts:2764</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the scale/size of the [Object].
+									This affects the size of a [WorldObject] in-game, but [Item]s don&#39;t have a &quot;scale&quot;.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettypeid" class="tsd-anchor"></a>
+					<h3>Get<wbr>Type<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Get<wbr>Type<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2780">eluna-ts-definitions/src/global.d.ts:2780</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the TypeId of the [Object].
+										enum TypeID
+										{
+										TYPEID_OBJECT        = 0,
+										TYPEID_ITEM          = 1,
+										TYPEID_CONTAINER     = 2,
+										TYPEID_UNIT          = 3,
+										TYPEID_PLAYER        = 4,
+										TYPEID_GAMEOBJECT    = 5,
+										TYPEID_DYNAMICOBJECT = 6,
+										TYPEID_CORPSE        = 7
+									};</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getuint16value" class="tsd-anchor"></a>
+					<h3>GetUInt16<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">GetUInt16<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2786">eluna-ts-definitions/src/global.d.ts:2786</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the data at the specified index and offset, casted to a signed 16-bit integer.
+									E.g. if you want the second half-word at index 10, you would pass in 1 as the offset.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getuint32value" class="tsd-anchor"></a>
+					<h3>GetUInt32<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">GetUInt32<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2791">eluna-ts-definitions/src/global.d.ts:2791</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the data at the specified index, casted to a unsigned 32-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getuint64value" class="tsd-anchor"></a>
+					<h3>GetUInt64<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">GetUInt64<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2796">eluna-ts-definitions/src/global.d.ts:2796</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the data at the specified index, casted to an unsigned 64-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="hasflag" class="tsd-anchor"></a>
+					<h3>Has<wbr>Flag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Has<wbr>Flag<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, flag<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2801">eluna-ts-definitions/src/global.d.ts:2801</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the specified flag is set, otherwise <code>false</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>flag: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isinworld" class="tsd-anchor"></a>
+					<h3>Is<wbr>InWorld</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Is<wbr>InWorld<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2806">eluna-ts-definitions/src/global.d.ts:2806</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns <code>true</code> if the [Object] has been added to its [Map], otherwise <code>false</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeflag" class="tsd-anchor"></a>
+					<h3>Remove<wbr>Flag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Remove<wbr>Flag<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, flag<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2811">eluna-ts-definitions/src/global.d.ts:2811</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a flag from the value at the specified index.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>flag: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setbytevalue" class="tsd-anchor"></a>
+					<h3>Set<wbr>Byte<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Set<wbr>Byte<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2816">eluna-ts-definitions/src/global.d.ts:2816</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index and offset to the given value, converted to an unsigned 8-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setflag" class="tsd-anchor"></a>
+					<h3>Set<wbr>Flag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Set<wbr>Flag<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2823">eluna-ts-definitions/src/global.d.ts:2823</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the specified flag in the data value at the specified index.
+										If the flag was already set, it remains set.
+									To remove a flag, use [Object:RemoveFlag].</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setfloatvalue" class="tsd-anchor"></a>
+					<h3>Set<wbr>Float<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Set<wbr>Float<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2828">eluna-ts-definitions/src/global.d.ts:2828</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to a single-precision floating point value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setint16value" class="tsd-anchor"></a>
+					<h3>Set<wbr>Int16<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Set<wbr>Int16<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2833">eluna-ts-definitions/src/global.d.ts:2833</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to a signed 16-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setint32value" class="tsd-anchor"></a>
+					<h3>Set<wbr>Int32<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Set<wbr>Int32<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2838">eluna-ts-definitions/src/global.d.ts:2838</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to a signed 32-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setscale" class="tsd-anchor"></a>
+					<h3>Set<wbr>Scale</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">Set<wbr>Scale<span class="tsd-signature-symbol">(</span>scale<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2843">eluna-ts-definitions/src/global.d.ts:2843</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the [Object]&#39;s scale/size to the given value.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>scale: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setuint16value" class="tsd-anchor"></a>
+					<h3>SetUInt16<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">SetUInt16<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2848">eluna-ts-definitions/src/global.d.ts:2848</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to an unsigned 16-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setuint32value" class="tsd-anchor"></a>
+					<h3>SetUInt32<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">SetUInt32<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2853">eluna-ts-definitions/src/global.d.ts:2853</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to an unsigned 32-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setuint64value" class="tsd-anchor"></a>
+					<h3>SetUInt64<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">SetUInt64<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2858">eluna-ts-definitions/src/global.d.ts:2858</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to an unsigned 64-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="tocorpse" class="tsd-anchor"></a>
+					<h3>To<wbr>Corpse</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">To<wbr>Corpse<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eluna_ts_definitions_src_global.corpse.html" class="tsd-signature-type">Corpse</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2864">eluna-ts-definitions/src/global.d.ts:2864</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to convert the [Object] to a [Corpse].
+									If the [Object] is not a [Corpse], returns <code>nil</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="eluna_ts_definitions_src_global.corpse.html" class="tsd-signature-type">Corpse</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="tocreature" class="tsd-anchor"></a>
+					<h3>To<wbr>Creature</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">To<wbr>Creature<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eluna_ts_definitions_src_global.creature.html" class="tsd-signature-type">Creature</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2870">eluna-ts-definitions/src/global.d.ts:2870</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to convert the [Object] to a [Creature].
+									If the [Object] is not a [Creature], returns <code>nil</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="eluna_ts_definitions_src_global.creature.html" class="tsd-signature-type">Creature</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="togameobject" class="tsd-anchor"></a>
+					<h3>To<wbr>Game<wbr>Object</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">To<wbr>Game<wbr>Object<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eluna_ts_definitions_src_global.gameobject.html" class="tsd-signature-type">GameObject</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2876">eluna-ts-definitions/src/global.d.ts:2876</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to convert the [Object] to a [GameObject].
+									If the [Object] is not a [GameObject], returns <code>nil</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="eluna_ts_definitions_src_global.gameobject.html" class="tsd-signature-type">GameObject</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="toplayer" class="tsd-anchor"></a>
+					<h3>To<wbr>Player</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">To<wbr>Player<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eluna_ts_definitions_src_global.player.html" class="tsd-signature-type">Player</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2882">eluna-ts-definitions/src/global.d.ts:2882</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to convert the [Object] to a [Player].
+									If the [Object] is not a [Player], returns <code>nil</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="eluna_ts_definitions_src_global.player.html" class="tsd-signature-type">Player</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="tounit" class="tsd-anchor"></a>
+					<h3>To<wbr>Unit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">To<wbr>Unit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="eluna_ts_definitions_src_global.unit.html" class="tsd-signature-type">Unit</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2888">eluna-ts-definitions/src/global.d.ts:2888</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Attempts to convert the [Object] to a [Unit].
+									If the [Object] is not a [Unit], returns <code>nil</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="eluna_ts_definitions_src_global.unit.html" class="tsd-signature-type">Unit</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="updateuint32value" class="tsd-anchor"></a>
+					<h3>UpdateUInt32<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">UpdateUInt32<wbr>Value<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/azerothcore/eluna-ts/blob/7903b91/deps/eluna-ts-definitions/src/global.d.ts#L2893">eluna-ts-definitions/src/global.d.ts:2893</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the data at the specified index to the given value, converted to an unsigned 32-bit integer.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="label pp-nav pp-group">
+						<span>API</span>
+					</li>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src.html">eluna-<wbr>ts-<wbr>definitions/src</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_ac.html">eluna-<wbr>ts-<wbr>definitions/src/ac</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_global.html">eluna-<wbr>ts-<wbr>definitions/src/global</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_battlegroundhooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Battle<wbr>Ground<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_creaturehooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Creature<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_gameobjecthooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Game<wbr>Object<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_gossiphooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Gossip<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_grouphooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Group<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_guildhooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Guild<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_itemhooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Item<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_maphooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Map<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_packethooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Packet<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_playerhooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Player<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_serverhooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Server<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hooks_vehiclehooks.html">eluna-<wbr>ts-<wbr>definitions/src/hooks/<wbr>Vehicle<wbr>Hooks</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_definitions_src_hotfix.html">eluna-<wbr>ts-<wbr>definitions/src/hotfix</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/eluna_ts_lib_src.html">eluna-<wbr>ts-<wbr>lib/src</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="eluna_ts_definitions_src_global.eobject.html" class="tsd-kind-icon">EObject</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getbytevalue" class="tsd-kind-icon">Get<wbr>Byte<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getentry" class="tsd-kind-icon">Get<wbr>Entry</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getfloatvalue" class="tsd-kind-icon">Get<wbr>Float<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getguid" class="tsd-kind-icon">GetGUID</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getguidlow" class="tsd-kind-icon">GetGUIDLow</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getint32value" class="tsd-kind-icon">Get<wbr>Int32<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getscale" class="tsd-kind-icon">Get<wbr>Scale</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#gettypeid" class="tsd-kind-icon">Get<wbr>Type<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getuint16value" class="tsd-kind-icon">GetUInt16<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getuint32value" class="tsd-kind-icon">GetUInt32<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#getuint64value" class="tsd-kind-icon">GetUInt64<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#hasflag" class="tsd-kind-icon">Has<wbr>Flag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#isinworld" class="tsd-kind-icon">Is<wbr>InWorld</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#removeflag" class="tsd-kind-icon">Remove<wbr>Flag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setbytevalue" class="tsd-kind-icon">Set<wbr>Byte<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setflag" class="tsd-kind-icon">Set<wbr>Flag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setfloatvalue" class="tsd-kind-icon">Set<wbr>Float<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setint16value" class="tsd-kind-icon">Set<wbr>Int16<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setint32value" class="tsd-kind-icon">Set<wbr>Int32<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setscale" class="tsd-kind-icon">Set<wbr>Scale</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setuint16value" class="tsd-kind-icon">SetUInt16<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setuint32value" class="tsd-kind-icon">SetUInt32<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#setuint64value" class="tsd-kind-icon">SetUInt64<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#tocorpse" class="tsd-kind-icon">To<wbr>Corpse</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#tocreature" class="tsd-kind-icon">To<wbr>Creature</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#togameobject" class="tsd-kind-icon">To<wbr>Game<wbr>Object</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#toplayer" class="tsd-kind-icon">To<wbr>Player</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#tounit" class="tsd-kind-icon">To<wbr>Unit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="eluna_ts_definitions_src_global.eobject.html#updateuint32value" class="tsd-kind-icon">UpdateUInt32<wbr>Value</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.json"><' + '/script>');</script>
+</body>
+</html>
