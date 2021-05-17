@@ -1,7 +1,7 @@
 /**
  * Sanitize a string for SQL
- * @inheritdoc
+ *
  * @param str
- * @returns
+ * @returns Sanitized string
  */
 export declare function stringSanitizer(str: string): string;
