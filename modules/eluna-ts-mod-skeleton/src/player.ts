@@ -1,3 +1,5 @@
+import { stringSanitizer } from "@azerothcore/eluna-ts-lib";
+
 /**
  * Example with arrow function
  *
@@ -12,7 +14,10 @@ export const OnPlayerLogin: player_event_on_login = (event, player) => {
   );
 };
 
-RegisterPlayerEvent(PlayerEvents.PLAYER_EVENT_ON_LOGIN, (...args)=> OnPlayerLogin(...args));
+RegisterPlayerEvent(
+  PlayerEvents.PLAYER_EVENT_ON_LOGIN,
+  (...args) => OnPlayerLogin(...args),
+);
 
 /**
  *
@@ -35,16 +40,21 @@ export class PlayerChat {
   }
 
   OnPlayerChat: player_event_on_chat = (
-    event:number,
+    event: number,
     player: Player,
     msg: string,
   ): string | boolean => {
+    const sanitized = stringSanitizer(msg);
+
+    msg = sanitized != msg ? `${sanitized} (Sanitized)` : msg;
+
     player.SendChatMessageToPlayer(
       ChatMsg.CHAT_MSG_WHISPER,
       Language.LANG_UNIVERSAL,
-      `Previous message: ${this.previousMessage}, current message: ${msg}!`,
+      `Previous message: ${this.previousMessage}, current message: ${msg}`,
       player,
     );
+
 
     this.previousMessage = msg;
 
@@ -54,5 +64,7 @@ export class PlayerChat {
 
 const playerChat = new PlayerChat("First Message");
 
-RegisterPlayerEvent(PlayerEvents.PLAYER_EVENT_ON_CHAT, (...args) => playerChat.OnPlayerChat(...args))
-
+RegisterPlayerEvent(
+  PlayerEvents.PLAYER_EVENT_ON_CHAT,
+  (...args) => playerChat.OnPlayerChat(...args),
+);

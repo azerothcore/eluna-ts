@@ -3,7 +3,7 @@
   "compilerOptions": {
     "lib": [
       "DOM","ESNext"
-    ]
+    ],
   },
   "exclude": []
 }
