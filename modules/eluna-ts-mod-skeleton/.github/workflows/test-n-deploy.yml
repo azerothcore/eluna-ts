@@ -99,7 +99,6 @@ jobs:
       with:
         branch: gh-pages
         folder: docs/typedoc
-        target-folder: ${{ env.STAGE }}
         clean: true # Automatically remove deleted files from the deploy branch
 
     - name: Publish package

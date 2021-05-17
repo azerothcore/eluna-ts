@@ -50,7 +50,7 @@ jobs:
         with:
           branch: gh-pages
           folder: docs/typedoc
-          target-folder: ${{ env.STAGE }}
+          target-folder: ${{ steps.extract_branch.outputs.branch }}
           clean: true # Automatically remove deleted files from the deploy branch
 
       - name: Login to Docker Hub
