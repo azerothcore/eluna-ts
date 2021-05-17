@@ -1,8 +1,8 @@
 /**
  * Sanitize a string for SQL
- * @inheritdoc
+ *
  * @param str
- * @returns
+ * @returns Sanitized string
  */
 export function stringSanitizer(str: string): string {
   return string.gsub(

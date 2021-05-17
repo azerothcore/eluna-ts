@@ -42,6 +42,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
+        npm install
+        npm run test
         cd deps/eluna-ts-lib
         npm install
         npm run lint
@@ -73,9 +75,14 @@ jobs:
         node-version: 14.x
 
     - run: |
-        cd deps/eluna-ts-lib
         npm install
+        npm run test
+        cd deps/eluna-ts-lib
         npm run build
+        git pull
+
+    - name: Pull latest changes
+      run: |
         git pull
 
     - name: Update version in package.json
@@ -85,6 +92,7 @@ jobs:
         PACKAGEJSON_DIR: deps/eluna-ts-lib
       with:
         tag-prefix:  'lib-'
+
     - name: Publish package
       uses: JS-DevTools/npm-publish@v1
       with:

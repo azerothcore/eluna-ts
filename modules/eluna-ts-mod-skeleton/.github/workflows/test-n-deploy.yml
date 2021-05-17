@@ -70,7 +70,8 @@ jobs:
         node-version: 14.x
 
     # generate and deploy build, coverage and documentation
-    - run: |
+    - name: Generate resources
+      run: |
         npm install
         npm run build
         npm run doc:gen
@@ -84,13 +85,16 @@ jobs:
         commit-msg: Update dist
         github-token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Pull latest changes
+      run: |
+        git pull
+
     - name: Update version in package.json
       uses:  'phips28/gh-action-bump-version@master'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Deploy to GH Pages
-      if: steps.bitvavo.outputs.github_stage != 'other' # deploy only for dev, qa and prod
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
