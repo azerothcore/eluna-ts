@@ -11,7 +11,7 @@ This project is composed by:
 DISCLAIMER ⚠️: not all Typescript features are supported by Eluna-TS, the limitations are listed inside the documentation of the TypeScriptToLua project.
 ### Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/FEmjdauPKH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Typescript-to-lua-azerothcore](https://img.youtube.com/vi/FEmjdauPKH0/0.jpg)](https://www.youtube.com/watch?v=FEmjdauPKH0)
 
 [Last Eluna commit compatibility check](https://github.com/ElunaLuaEngine/Eluna/commit/2962d4fea3708cf22964d1cc750290b8980b313f)
 
