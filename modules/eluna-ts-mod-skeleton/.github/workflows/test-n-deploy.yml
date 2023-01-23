@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 15.x]
+        node-version: [16.x, 18.x, 19.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -57,17 +57,17 @@ jobs:
       with:
         # npm cache files are stored in `~/.npm` on Linux/macOS
         path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-14.x-${{ hashFiles('deps/eluna-ts-definitions/package-lock.json') }}
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-16.x-${{ hashFiles('deps/eluna-ts-definitions/package-lock.json') }}
         restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-14.x
+          ${{ runner.os }}-build-${{ env.cache-name }}-16.x
           ${{ runner.os }}-build-${{ env.cache-name }}-
           ${{ runner.os }}-build-
           ${{ runner.os }}-
 
-    - name: Use Node.js 14.x
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v1
       with:
-        node-version: 14.x
+        node-version: 16.x
 
     # generate and deploy build, coverage and documentation
     - name: Generate resources

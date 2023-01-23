@@ -21,7 +21,7 @@ If you don't have docker or you already have Nodejs install, you can just follow
 
 ### 1. Requirements
 
-- Install [nodejs 14+](https://nodejs.org/en/)
+- Install [nodejs 16+](https://nodejs.org/en/)
 
 **NOTE**: You can run the `bash install-node.sh` command to do it with an automatic script (it works on almost every OS with bash)
 ### 2. Install dependencies
